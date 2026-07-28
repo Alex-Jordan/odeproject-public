@@ -1035,6 +1035,49 @@
                         
                     </ol></p>
             </statement>
+            <solution component="instructors">
+              <p><em>Part (a).</em>
+              During the time interval <m>[t, t + \Delta t]</m>, the inflow from rivers
+              contributes pollutant at rate <m>r C</m>, while the outflow to the Angara
+              River removes pollutant at rate <m>r C_{\text{out}} = r \cdot x(t)/V</m>.
+              Therefore,
+                <md>\Delta x \approx \left(rC - \frac{r}{V}x\right)\Delta t
+                    = \left(60C - \frac{60}{23600}x\right)\Delta t.</md>
+              </p>
+              <p><em>Part (b).</em>
+              Dividing by <m>\Delta t</m> and taking the limit gives the initial value problem
+                <md>
+                  <mrow>\frac{dx}{dt} &amp;= rC - \frac{r}{V}x = 60C - \frac{60}{23600}x,</mrow>
+                  <mrow>x(0) &amp;= 6CV.</mrow>
+                </md>
+              </p>
+              <p><em>Part (c).</em>
+              Rewrite the ODE as
+                <md>x' + \frac{r}{V}x = rC.</md>
+              The integrating factor is <m>\mu(t) = e^{rt/V}</m>, giving
+                <md>\frac{d}{dt}\!\left(e^{rt/V}x\right) = rC e^{rt/V}.</md>
+              Integrating both sides,
+                <md>e^{rt/V}x = CV e^{rt/V} + A,</md>
+              so
+                <md>x(t) = CV + Ae^{-rt/V}.</md>
+              Applying <m>x(0) = 6CV</m> gives <m>A = 5CV</m>, and the solution is
+                <md>x(t) = CV\!\left(1 + 5e^{-rt/V}\right).</md>
+              </p>
+              <p><em>Part (d).</em>
+              Half the current pollution level is <m>x = 3CV</m>. Setting
+                <md>CV\!\left(1 + 5e^{-rt/V}\right) = 3CV</md>
+              and solving,
+                <md>
+                  <mrow>1 + 5e^{-rt/V} &amp;= 3</mrow>
+                  <mrow>e^{-rt/V} &amp;= \frac{2}{5}</mrow>
+                  <mrow>t &amp;= \frac{V}{r}\ln\!\frac{5}{2}
+                           = \frac{23600}{60}\ln\!\frac{5}{2}
+                           \approx 360 \text{ years.}</mrow>
+                </md>
+              It will take approximately <m>360</m> years for the pollution level in Lake
+              Baikal to fall to half its current level.
+              </p>
+            </solution>
         </exercise> 
 
         <exercise>
@@ -1043,6 +1086,22 @@
                     <md>y = \frac{1}{\mu(t)} \left( \int \mu(t) g(t) \, dt + C \right)</md>
                 is a solution to <m>y' + p(t) y = g(t)</m>.</p>
             </statement>
+            <solution component="instructors">
+              <p>Let <m>\mu(t) = e^{\int p(t)\,dt}</m> be the integrating factor, so that
+              <m>\mu'(t) = p(t)\mu(t)</m>. Multiplying both sides of the proposed solution
+                <md>y = \frac{1}{\mu(t)}\left(\int \mu(t)g(t)\,dt + C\right)</md>
+              by <m>\mu(t)</m> gives
+                <md>\mu(t)\, y = \int \mu(t)g(t)\,dt + C.</md>
+              Differentiating both sides with respect to <m>t</m>,
+                <md>\mu'(t)\,y + \mu(t)\,y' = \mu(t)g(t).</md>
+              Substituting <m>\mu'(t) = p(t)\mu(t)</m>,
+                <md>p(t)\mu(t)\,y + \mu(t)\,y' = \mu(t)g(t).</md>
+              Dividing through by <m>\mu(t) \neq 0</m>,
+                <md>y' + p(t)\,y = g(t),</md>
+              which is exactly the equation to be solved. Therefore <m>y = \dfrac{1}{\mu(t)}\!\left(\int \mu(t)g(t)\,dt + C\right)</m>
+              is a solution. <m>\square</m>
+              </p>
+            </solution>
         </exercise>
 
         <exercise>
