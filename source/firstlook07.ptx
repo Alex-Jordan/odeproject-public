@@ -293,6 +293,22 @@
                 <statement>
                     <p><m>y' = \lambda - y^2</m>.</p>
                 </statement>
+            <solution component="instructors">
+  <p>The equilibria of <m>y' = \lambda - y^2</m> satisfy <m>y^2 = \lambda</m>.
+  There are no equilibria for <m>\lambda \lt 0</m>, a single equilibrium
+  <m>y = 0</m> (a node) at <m>\lambda = 0</m>, and two equilibria
+  <m>y = \pm\sqrt{\lambda}</m> for <m>\lambda \gt 0</m>. Since
+  <m>f'(y) = -2y</m>, the equilibrium <m>y = \sqrt{\lambda}</m> is a sink
+  and <m>y = -\sqrt{\lambda}</m> is a source for all <m>\lambda \gt 0</m>.
+  The unique bifurcation value is <m>\lambda = 0</m>, a saddle-node
+  bifurcation.
+  </p>
+
+             <image width="60%">
+                          <xi:include href="prefigure/firstlook07-bifurcation-diagram-1-solution.xml"/>
+              </image>
+
+</solution>
             </exercise>
             <exercise>
                 <statement>
