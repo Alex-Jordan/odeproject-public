@@ -293,32 +293,67 @@
                 <statement>
                     <p><m>y' = \lambda - y^2</m>.</p>
                 </statement>
-            <solution component="instructors">
-  <p>The equilibria of <m>y' = \lambda - y^2</m> satisfy <m>y^2 = \lambda</m>.
-  There are no equilibria for <m>\lambda \lt 0</m>, a single equilibrium
-  <m>y = 0</m> (a node) at <m>\lambda = 0</m>, and two equilibria
-  <m>y = \pm\sqrt{\lambda}</m> for <m>\lambda \gt 0</m>. Since
-  <m>f'(y) = -2y</m>, the equilibrium <m>y = \sqrt{\lambda}</m> is a sink
-  and <m>y = -\sqrt{\lambda}</m> is a source for all <m>\lambda \gt 0</m>.
-  The unique bifurcation value is <m>\lambda = 0</m>, a saddle-node
-  bifurcation.
-  </p>
+                <solution component="instructors">
+                      <p>The equilibria of <m>y' = \lambda - y^2</m> satisfy <m>y^2 = \lambda</m>.
+                      There are no equilibria for <m>\lambda \lt 0</m>, a single equilibrium
+                      <m>y = 0</m> (a node) at <m>\lambda = 0</m>, and two equilibria
+                      <m>y = \pm\sqrt{\lambda}</m> for <m>\lambda \gt 0</m>. Since
+                      <m>f'(y) = -2y</m>, the equilibrium <m>y = \sqrt{\lambda}</m> is a sink
+                      and <m>y = -\sqrt{\lambda}</m> is a source for all <m>\lambda \gt 0</m>.
+                      The unique bifurcation value is <m>\lambda = 0</m>, a saddle-node
+                      bifurcation.
+                      </p>
 
-             <image width="60%">
-                          <xi:include href="prefigure/firstlook07-bifurcation-diagram-1-solution.xml"/>
-              </image>
+                     <image width="60%">
+                        <xi:include href="prefigure/firstlook07-bifurcation-diagram-1-solution.xml"/>
+                      </image>
 
-</solution>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>y' = \lambda y^2 - 1</m> for <m>\lambda \in {\mathbb R}</m>.</p>
                 </statement>
+                <solution component="instructors">
+                  <p>The equilibria of <m>y' = \lambda y^2 - 1</m> satisfy <m>\lambda y^2 = 1</m>.
+                  For <m>\lambda \leq 0</m> there are no real equilibria and <m>y' \lt 0</m>
+                  everywhere, so all solutions decrease. For <m>\lambda \gt 0</m> there are
+                  two equilibria <m>y = \pm 1/\sqrt{\lambda}</m>. Since <m>f'(y) = 2\lambda y</m>,
+                  the equilibrium <m>y = -1/\sqrt{\lambda}</m> is a sink and
+                  <m>y = 1/\sqrt{\lambda}</m> is a source. The unique bifurcation value is
+                  <m>\lambda = 0</m>: for <m>\lambda \leq 0</m> no equilibria exist, while
+                  for <m>\lambda \gt 0</m> two equilibria appear at <m>\pm 1/\sqrt{\lambda}</m>
+                  and move toward <m>0</m> as <m>\lambda \to \infty</m>.
+                  </p>
+                     <image width="60%">
+                        <xi:include href="prefigure/firstlook07-bifurcation-diagram-2-solution.xml"/>
+                      </image>
+
+                </solution>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>y' = \lambda - 2y + y^2</m>.</p>
                 </statement>
+                <solution component="instructors">
+                  <p>The equilibria of <m>y' = \lambda - 2y + y^2</m> satisfy
+                  <m>y^2 - 2y + \lambda = 0</m>, giving <m>y = 1 \pm \sqrt{1-\lambda}</m>.
+                  There are two equilibria for <m>\lambda \lt 1</m>, a single equilibrium
+                  <m>y = 1</m> for <m>\lambda = 1</m>, and no equilibria for
+                  <m>\lambda \gt 1</m>. Since <m>f'(y) = 2(y-1)</m>, the equilibrium
+                  <m>y = 1 + \sqrt{1-\lambda}</m> satisfies <m>f' \gt 0</m> and is a
+                  source, while <m>y = 1 - \sqrt{1-\lambda}</m> satisfies <m>f' \lt 0</m>
+                  and is a sink. At <m>\lambda = 1</m> the two equilibria collide and
+                  annihilate in a saddle-node bifurcation. For <m>\lambda \gt 1</m>,
+                  <m>y' = (y-1)^2 + (\lambda - 1) \gt 0</m> everywhere, so all solutions
+                  increase without bound.
+                  </p>
+
+                     <image width="60%">
+                        <xi:include href="prefigure/firstlook07-bifurcation-diagram-3-solution.xml"/>
+                      </image>
+                </solution>
+
             </exercise>
             <exercise>
                 <statement>
