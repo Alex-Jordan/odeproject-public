@@ -415,58 +415,58 @@
                 <p>Describe the phase line portraits for <m>y' = \lambda y - \sin y</m> for <m>\lambda > 2 / \pi</m> and how it depends on the parameter <m>\lambda</m>. Draw the bifurcation diagram for this equation.</p>
             </statement>
 
-                <solution component="instructors">
-  <p>The equilibria of <m>y' = \lambda y - \sin y</m> satisfy
-  <m>\lambda y = \sin y</m>, i.e., the intersections of the line
-  <m>z = \lambda y</m> with <m>z = \sin y</m>. The origin <m>y = 0</m>
-  is always an equilibrium. Additional equilibria <m>y = \pm y^*</m>
-  exist when the line <m>z = \lambda y</m> intersects <m>z = \sin y</m>
-  outside the origin, which occurs precisely when
-  <m>\lambda \lt \max_{y \neq 0}(\sin y / y) = 1</m> and
-  <m>\lambda \gt 2/\pi</m> (so that the line still cuts through the first
-  arch of sine). Since <m>f'(y) = \lambda - \cos y</m>, the stability of
-  each equilibrium is determined as follows.
-  </p>
-  <p>At <m>y = 0</m>: <m>f'(0) = \lambda - 1</m>, so <m>y = 0</m> is a
-  sink for <m>2/\pi \lt \lambda \lt 1</m>, a node at <m>\lambda = 1</m>,
-  and a source for <m>\lambda \gt 1</m>.
-  </p>
-  <p>At <m>y = \pm y^*</m> where <m>\sin(y^*)/y^* = \lambda</m> and
-  <m>y^* \in (0,\pi)</m>: since <m>\tan(y^*) \gt y^*</m> for
-  <m>y^* \in (0, \pi/2)</m>, we have <m>\cos(y^*) \lt \sin(y^*)/y^*
-  = \lambda</m>, so <m>f'(y^*) = \lambda - \cos(y^*) \gt 0</m> and
-  <m>y = \pm y^*</m> are sources.
-  </p>
-  <p>There are two bifurcation values:
-  <ul>
-    <li><p><m>\lambda = 2/\pi</m>: the line <m>z = \lambda y</m> is
-    tangent to <m>z = \sin y</m> at <m>y = \pm\pi/2</m>, where two
-    sources are born (saddle-node bifurcation).</p></li>
-    <li><p><m>\lambda = 1</m>: the equilibria <m>y = \pm y^*</m> collide
-    with <m>y = 0</m> as <m>y^* \to 0</m>, and <m>y = 0</m> changes
-    from a sink to a source (pitchfork bifurcation).</p></li>
-  </ul>
-  </p>
+            <solution component="instructors">
+              <p>The equilibria of <m>y' = \lambda y - \sin y</m> satisfy
+              <m>\lambda y = \sin y</m>, i.e., the intersections of the line
+              <m>z = \lambda y</m> with <m>z = \sin y</m>. The origin <m>y = 0</m>
+              is always an equilibrium. Additional equilibria <m>y = \pm y^*</m>
+              exist when the line <m>z = \lambda y</m> intersects <m>z = \sin y</m>
+              outside the origin, which occurs precisely when
+              <m>\lambda \lt \max_{y \neq 0}(\sin y / y) = 1</m> and
+              <m>\lambda \gt 2/\pi</m> (so that the line still cuts through the first
+              arch of sine). Since <m>f'(y) = \lambda - \cos y</m>, the stability of
+              each equilibrium is determined as follows.
+              </p>
+              <p>At <m>y = 0</m>: <m>f'(0) = \lambda - 1</m>, so <m>y = 0</m> is a
+              sink for <m>2/\pi \lt \lambda \lt 1</m>, a node at <m>\lambda = 1</m>,
+              and a source for <m>\lambda \gt 1</m>.
+              </p>
+              <p>At <m>y = \pm y^*</m> where <m>\sin(y^*)/y^* = \lambda</m> and
+              <m>y^* \in (0,\pi)</m>: since <m>\tan(y^*) \gt y^*</m> for
+              <m>y^* \in (0, \pi/2)</m>, we have <m>\cos(y^*) \lt \sin(y^*)/y^*
+              = \lambda</m>, so <m>f'(y^*) = \lambda - \cos(y^*) \gt 0</m> and
+              <m>y = \pm y^*</m> are sources.
+              </p>
+              <p>There are two bifurcation values:
+              <ul>
+                <li><p><m>\lambda = 2/\pi</m>: the line <m>z = \lambda y</m> is
+                tangent to <m>z = \sin y</m> at <m>y = \pm\pi/2</m>, where two
+                sources are born (saddle-node bifurcation).</p></li>
+                <li><p><m>\lambda = 1</m>: the equilibria <m>y = \pm y^*</m> collide
+                with <m>y = 0</m> as <m>y^* \to 0</m>, and <m>y = 0</m> changes
+                from a sink to a source (pitchfork bifurcation).</p></li>
+              </ul>
+              </p>
 
-  <p>The phase portrait depends on <m>\lambda</m> as follows:
-  <ul>
-    <li><p><m>2/\pi \lt \lambda \lt 1</m>: <m>y = 0</m> is a sink
-    flanked by sources at <m>y = \pm y^*</m>; solutions starting between
-    <m>-y^*</m> and <m>y^*</m> converge to <m>0</m>, while those outside
-    diverge.</p></li>
-    <li><p><m>\lambda = 1</m>: <m>y = 0</m> is a node; all solutions
-    move slowly toward or away from <m>0</m> depending on initial
-    condition.</p></li>
-    <li><p><m>\lambda \gt 1</m>: <m>y = 0</m> is the only equilibrium
-    and is a source; all solutions diverge.</p></li>
-  </ul>
-  </p>
+              <p>The phase portrait depends on <m>\lambda</m> as follows:
+              <ul>
+                <li><p><m>2/\pi \lt \lambda \lt 1</m>: <m>y = 0</m> is a sink
+                flanked by sources at <m>y = \pm y^*</m>; solutions starting between
+                <m>-y^*</m> and <m>y^*</m> converge to <m>0</m>, while those outside
+                diverge.</p></li>
+                <li><p><m>\lambda = 1</m>: <m>y = 0</m> is a node; all solutions
+                move slowly toward or away from <m>0</m> depending on initial
+                condition.</p></li>
+                <li><p><m>\lambda \gt 1</m>: <m>y = 0</m> is the only equilibrium
+                and is a source; all solutions diverge.</p></li>
+              </ul>
+              </p>
 
-                       <image width="60%">
-                        <xi:include href="prefigure/firstlook07-bifurcation-diagram-6-solution.xml"/>
-                      </image>
+               <image width="60%">
+                <xi:include href="prefigure/firstlook07-bifurcation-diagram-6-solution.xml"/>
+              </image>
 
-</solution>
+            </solution>
         </exercise>
 
      

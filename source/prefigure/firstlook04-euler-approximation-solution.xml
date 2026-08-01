@@ -1,0 +1,29 @@
+<prefigure xmlns="https://prefigure.org"
+             label="euler-approximation-solution">
+
+<diagram dimensions="(300,200)" margins="30">
+  <coordinates bbox="(-0.15,-0.15,2.5,100)">
+
+    <grid-axes xlabel="t" ylabel="y"/>
+    <definition>g(x) = (1 + 5*exp(3*x))/3</definition>
+    <graph at="graph" function='g' stroke="black" thickness="2"/>
+    
+
+    <definition>f(t,y) = 3*y - 1</definition>
+    <definition>N=4</definition>
+    <definition>points = eulers_method(f,0,2,2,N)</definition>
+
+    <polygon at="h01" points="points" stroke="red"/>
+
+    <legend at="legend" anchor="(bbox[0] + 2, bbox[3])" 
+      alignment="sw" scale="0.8" opacity="0.5">
+      <item ref="graph">exact</item>
+      <item ref="h01"><m>h = 0.5</m></item>
+    </legend>
+
+  </coordinates>
+
+</diagram>
+
+</prefigure>
+    
