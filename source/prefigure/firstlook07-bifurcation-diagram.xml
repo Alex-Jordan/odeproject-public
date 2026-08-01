@@ -6,7 +6,7 @@
   <definition>f1(x) = exp(x)/10</definition>
 <definition>g(t)=(-t*(t-4), t)</definition>
   <coordinates bbox="[-1,-1,5,5]">
-    <grid-axes xlabel="x" ylabel="\lambda"/>
+    <grid-axes xlabel="\lambda" ylabel="x"/>
 
     <group at="solutions">
       <parametric-curve function="g" domain="(-1/4, 17/4)"

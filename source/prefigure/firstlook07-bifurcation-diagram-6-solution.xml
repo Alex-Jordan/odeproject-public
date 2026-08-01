@@ -1,0 +1,24 @@
+<prefigure xmlns="https://prefigure.org"
+             label="bifurcation-diagram-6-solution">
+
+
+<diagram dimensions="(300,300)" margins="5">
+<definition>g(t)=(sin(t)/t, t)</definition>
+<definition>h(t)=(t,0)</definition>
+  <coordinates bbox="[-1.5,-20.5,1.5,20.5]">
+    <grid-axes xlabel="\lambda" ylabel="y"/>
+
+    <group at="solutions">
+      <parametric-curve function="g" domain="(-20, 20)"
+          stroke="blue" thickness="3"/>
+        <parametric-curve function="h" domain="(-4, 4)"
+          stroke="blue" thickness="3"/>
+
+    </group>
+
+
+  </coordinates>
+
+</diagram>
+</prefigure>
+  

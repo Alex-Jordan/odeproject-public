@@ -5,7 +5,7 @@
 <diagram dimensions="(300,300)" margins="5">
 <definition>g(t)=(-t^2 + 2*t, t)</definition>
   <coordinates bbox="[-2.5,-2,2.5,4]">
-    <grid-axes xlabel="y" ylabel="\lambda"/>
+    <grid-axes xlabel="\lambda" ylabel="y"/>
 
     <group at="solutions">
       <parametric-curve function="g" domain="(-4, 4)"
