@@ -505,21 +505,322 @@
                 <statement>
                     <p><m>y' = -2y</m>, <m>y(0) = 0</m></p>
                 </statement>
+
+                <solution component="instructors">
+                  <p><em>Part (a).</em>
+                  Since <m>f(t,y) = -2y</m>, Euler's method gives
+                    <md>Y_{k+1} = Y_k + h f(t_k, Y_k) = Y_k - 2h Y_k = (1 - 2h)Y_k,</md>
+                  with initial values <m>t_0 = 0</m> and <m>Y_0 = y(0) = 0</m>.
+                  </p>
+
+                  <p><em>Part (b).</em>
+                  With <m>h = 0.1</m> and <m>Y_0 = 0</m>, the iteration
+                  <m>Y_{k+1} = (1-0.2)Y_k = 0.8\,Y_k</m> gives
+                    <md>
+                      <mrow>Y_1 &amp;= 0.8(0) = 0,</mrow>
+                      <mrow>Y_2 &amp;= 0.8(0) = 0,</mrow>
+                      <mrow>Y_3 &amp;= 0.8(0) = 0.</mrow>
+                    </md>
+                  </p>
+
+                  <p><em>Part (c).</em>
+                  The equation <m>y' = -2y</m> is separable. Separating and integrating,
+                    <md>\int \frac{dy}{y} = -2\int dt \implies \ln|y| = -2t + C,</md>
+                  so <m>y = Ae^{-2t}</m>. Applying <m>y(0) = 0</m> gives <m>A = 0</m>,
+                  and the exact solution is
+                    <md>y(t) \equiv 0.</md>
+                  </p>
+
+                  <p><em>Part (d).</em>
+                  Since the exact solution is identically zero and all Euler iterates are
+                  zero, the error is zero at every step.
+                  </p>
+
+                  <table>
+                    <title>Euler errors for <m>y' = -2y</m>, <m>y(0) = 0</m>,
+                    <m>h = 0.1</m></title>
+                    <tabular halign="center" top="medium">
+                      <row header="yes" bottom="medium">
+                        <cell><m>i</m></cell>
+                        <cell><m>t_i</m></cell>
+                        <cell><m>Y_i</m> (Euler)</cell>
+                        <cell><m>y(t_i)</m> (Exact)</cell>
+                        <cell><m>Y_i - y(t_i)</m></cell>
+                      </row>
+                      <row><cell>1</cell><cell>0.1</cell>
+                           <cell>0.0000</cell><cell>0.0000</cell><cell>0.0000</cell></row>
+                      <row><cell>2</cell><cell>0.2</cell>
+                           <cell>0.0000</cell><cell>0.0000</cell><cell>0.0000</cell></row>
+                      <row bottom="medium">
+                           <cell>3</cell><cell>0.3</cell>
+                           <cell>0.0000</cell><cell>0.0000</cell><cell>0.0000</cell></row>
+                    </tabular>
+                  </table>
+
+                  <remark>
+                    <p>This problem is trivial because <m>y(0) = 0</m> and
+                    <m>f(t, 0) = 0</m>, making <m>y \equiv 0</m> both the exact solution
+                    and every Euler iterate. The more instructive version of this problem
+                    uses the initial condition <m>y(0) = 1</m>, for which the exact
+                    solution is <m>y = e^{-2t}</m> and Euler's method with <m>h = 0.1</m>
+                    gives <m>Y_k = (0.8)^k</m>, producing the errors shown below.</p>
+
+                    <table>
+                      <title>Euler errors for <m>y' = -2y</m>, <m>y(0) = 1</m>,
+                      <m>h = 0.1</m></title>
+                      <tabular halign="center" top="medium">
+                        <row header="yes" bottom="medium">
+                          <cell><m>i</m></cell>
+                          <cell><m>t_i</m></cell>
+                          <cell><m>Y_i</m> (Euler)</cell>
+                          <cell><m>y(t_i) = e^{-2t_i}</m></cell>
+                          <cell><m>Y_i - y(t_i)</m></cell>
+                        </row>
+                        <row><cell>1</cell><cell>0.1</cell>
+                             <cell>0.8000</cell><cell>0.8187</cell>
+                             <cell><m>-0.0187</m></cell></row>
+                        <row><cell>2</cell><cell>0.2</cell>
+                             <cell>0.6400</cell><cell>0.6703</cell>
+                             <cell><m>-0.0303</m></cell></row>
+                        <row bottom="medium">
+                             <cell>3</cell><cell>0.3</cell>
+                             <cell>0.5120</cell><cell>0.5488</cell>
+                             <cell><m>-0.0368</m></cell></row>
+                      </tabular>
+                    </table>
+                  </remark>
+
+                </solution>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>y' = ty</m>, <m>y(0) = 1</m></p>
                 </statement>
+                <solution component="instructors">
+                  <p><em>Part (a).</em>
+                  Since <m>f(t,y) = ty</m>, Euler's method gives
+                    <md>Y_{k+1} = Y_k + h\,t_k\,Y_k = Y_k(1 + h t_k),</md>
+                  with initial values <m>t_0 = 0</m> and <m>Y_0 = y(0) = 1</m>.
+                  </p>
+
+                  <p><em>Part (b).</em>
+                  With <m>h = 0.1</m> and <m>t_k = 0.1k</m>, the iterations give
+                    <md>
+                      <mrow>Y_1 &amp;= Y_0(1 + 0.1 \cdot t_0)
+                                 = 1\bigl(1 + 0.1(0)\bigr) = 1.0000,</mrow>
+                      <mrow>Y_2 &amp;= Y_1(1 + 0.1 \cdot t_1)
+                                 = 1.0000\bigl(1 + 0.1(0.1)\bigr)</mrow>
+                                 <mrow> \amp = 1.0000(1.01) = 1.0100,</mrow>
+                      <mrow>Y_3 &amp;= Y_2(1 + 0.1 \cdot t_2)
+                                 = 1.0100\bigl(1 + 0.1(0.2)\bigr)</mrow>
+                                 <mrow> \amp = 1.0100(1.02) = 1.0302.</mrow>
+                    </md>
+                  </p>
+
+                  <p><em>Part (c).</em>
+                  The equation <m>y' = ty</m> is separable. Separating and integrating,
+                    <md>\int \frac{dy}{y} = \int t\,dt
+                        \implies \ln|y| = \frac{t^2}{2} + C,</md>
+                  so <m>y = Ae^{t^2/2}</m>. Applying <m>y(0) = 1</m> gives <m>A = 1</m>,
+                  and the exact solution is
+                    <md>y(t) = e^{t^2/2}.</md>
+                  The exact values at the required points are
+                    <md>
+                      <mrow>y(0.1) &amp;= e^{0.005}  = 1.0050,</mrow>
+                      <mrow>y(0.2) &amp;= e^{0.02}   = 1.0202,</mrow>
+                      <mrow>y(0.3) &amp;= e^{0.045}  = 1.0460.</mrow>
+                    </md>
+                  </p>
+
+                  <p><em>Part (d).</em>
+                  The Euler approximations underestimate the exact solution at each step
+                  because the solution is concave up. The errors are summarized in the
+                  following table.
+                  </p>
+
+                  <table>
+                    <title>Euler errors for <m>y' = ty</m>, <m>y(0) = 1</m>,
+                    <m>h = 0.1</m></title>
+                    <tabular halign="center" top="medium">
+                      <row header="yes" bottom="medium">
+                        <cell><m>i</m></cell>
+                        <cell><m>t_i</m></cell>
+                        <cell><m>Y_i</m> (Euler)</cell>
+                        <cell><m>y(t_i) = e^{t_i^2/2}</m></cell>
+                        <cell><m>Y_i - y(t_i)</m></cell>
+                      </row>
+                      <row>
+                        <cell>1</cell><cell>0.1</cell>
+                        <cell>1.0000</cell><cell>1.0050</cell>
+                        <cell><m>-0.0050</m></cell>
+                      </row>
+                      <row>
+                        <cell>2</cell><cell>0.2</cell>
+                        <cell>1.0100</cell><cell>1.0202</cell>
+                        <cell><m>-0.0102</m></cell>
+                      </row>
+                      <row bottom="medium">
+                        <cell>3</cell><cell>0.3</cell>
+                        <cell>1.0302</cell><cell>1.0460</cell>
+                        <cell><m>-0.0158</m></cell>
+                      </row>
+                    </tabular>
+                  </table>
+
+                </solution>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>y' = y^3</m>, <m>y(0) = 1</m></p>
                 </statement>
+
+                <solution component="instructors">
+                  <p><em>Part (a).</em>
+                  Since <m>f(t,y) = y^3</m>, Euler's method gives
+                    <md>Y_{k+1} = Y_k + h Y_k^3,</md>
+                  with initial values <m>t_0 = 0</m> and <m>Y_0 = y(0) = 1</m>.
+                  </p>
+
+                  <p><em>Part (b).</em>
+                  With <m>h = 0.1</m> the iterations give
+                    <md>
+                      <mrow>Y_1 &amp;= Y_0 + 0.1 Y_0^3
+                                 = 1 + 0.1(1)^3 = 1.1000,</mrow>
+                      <mrow>Y_2 &amp;= Y_1 + 0.1 Y_1^3
+                                 = 1.1000 + 0.1(1.1000)^3</mrow>
+                                 <mrow> \amp = 1.1000 + 0.1331 = 1.2331,</mrow>
+                      <mrow>Y_3 &amp;= Y_2 + 0.1 Y_2^3
+                                 = 1.2331 + 0.1(1.2331)^3</mrow>
+                                <mrow> \amp  = 1.2331 + 0.1875 = 1.4206.</mrow>
+                    </md>
+                  </p>
+
+                  <p><em>Part (c).</em>
+                  The equation <m>y' = y^3</m> is separable. Separating and integrating,
+                    <md>\int y^{-3}\,dy = \int dt
+                        \implies -\frac{1}{2y^2} = t + C.</md>
+                  Solving for <m>y</m> gives <m>y = (A - 2t)^{-1/2}</m> for a constant
+                  <m>A</m>. Applying <m>y(0) = 1</m> gives <m>A = 1</m>, so the exact
+                  solution is
+                    <md>y(t) = \frac{1}{\sqrt{1 - 2t}},</md>
+                  which has a vertical asymptote at <m>t = 1/2</m>. The exact values at
+                  the required points are
+                    <md>
+                      <mrow>y(0.1) &amp;= \frac{1}{\sqrt{0.8}}  = 1.1180,</mrow>
+                      <mrow>y(0.2) &amp;= \frac{1}{\sqrt{0.6}}  = 1.2910,</mrow>
+                      <mrow>y(0.3) &amp;= \frac{1}{\sqrt{0.4}}  = 1.5811.</mrow>
+                    </md>
+                  </p>
+
+                  <p><em>Part (d).</em>
+                  The Euler approximations increasingly underestimate the exact solution
+                  as the solution grows steeply toward its blowup at <m>t = 0.5</m>.
+                  </p>
+
+                  <table>
+                    <title>Euler errors for <m>y' = y^3</m>, <m>y(0) = 1</m>,
+                    <m>h = 0.1</m></title>
+                    <tabular halign="center" top="medium">
+                      <row header="yes" bottom="medium">
+                        <cell><m>i</m></cell>
+                        <cell><m>t_i</m></cell>
+                        <cell><m>Y_i</m> (Euler)</cell>
+                        <cell><m>y(t_i) = (1-2t_i)^{-1/2}</m></cell>
+                        <cell><m>Y_i - y(t_i)</m></cell>
+                      </row>
+                      <row>
+                        <cell>1</cell><cell>0.1</cell>
+                        <cell>1.1000</cell><cell>1.1180</cell>
+                        <cell><m>-0.0180</m></cell>
+                      </row>
+                      <row>
+                        <cell>2</cell><cell>0.2</cell>
+                        <cell>1.2331</cell><cell>1.2910</cell>
+                        <cell><m>-0.0579</m></cell>
+                      </row>
+                      <row bottom="medium">
+                        <cell>3</cell><cell>0.3</cell>
+                        <cell>1.4206</cell><cell>1.5811</cell>
+                        <cell><m>-0.1605</m></cell>
+                      </row>
+                    </tabular>
+                  </table>
+
+                </solution>
+
             </exercise>
             <exercise>
                 <statement>
                     <p><m>y' = y</m>, <m>y'(0) = 1</m></p>
                 </statement>
+                <solution component="instructors">
+                  <p><em>Part (a).</em>
+                  Since <m>f(t,y) = y</m>, Euler's method gives
+                    <md>Y_{k+1} = Y_k + h Y_k = (1+h)Y_k,</md>
+                  with initial values <m>t_0 = 0</m> and <m>Y_0 = y(0) = 1</m>.
+                  (Note: the condition <m>y'(0) = 1</m> is equivalent to <m>y(0) = 1</m>
+                  since <m>y' = y</m>.)
+                  </p>
+
+                  <p><em>Part (b).</em>
+                  With <m>h = 0.1</m> the iteration <m>Y_{k+1} = 1.1\,Y_k</m> gives
+                    <md>
+                      <mrow>Y_1 &amp;= 1.1(1.0000) = 1.1000,</mrow>
+                      <mrow>Y_2 &amp;= 1.1(1.1000) = 1.2100,</mrow>
+                      <mrow>Y_3 &amp;= 1.1(1.2100) = 1.3310.</mrow>
+                    </md>
+                  In general, <m>Y_k = (1.1)^k</m>.
+                  </p>
+
+                  <p><em>Part (c).</em>
+                  The equation <m>y' = y</m> is separable. Separating and integrating,
+                    <md>\int \frac{dy}{y} = \int dt \implies \ln|y| = t + C,</md>
+                  so <m>y = Ae^t</m>. Applying <m>y(0) = 1</m> gives <m>A = 1</m>,
+                  and the exact solution is
+                    <md>y(t) = e^t.</md>
+                  The exact values at the required points are
+                    <md>
+                      <mrow>y(0.1) &amp;= e^{0.1} = 1.1052,</mrow>
+                      <mrow>y(0.2) &amp;= e^{0.2} = 1.2214,</mrow>
+                      <mrow>y(0.3) &amp;= e^{0.3} = 1.3499.</mrow>
+                    </md>
+                  </p>
+
+                  <p><em>Part (d).</em>
+                  Since <m>y = e^t</m> is convex, Euler's method consistently
+                  underestimates the exact solution, with the error growing at each step.
+                  </p>
+
+                  <table>
+                    <title>Euler errors for <m>y' = y</m>, <m>y(0) = 1</m>,
+                    <m>h = 0.1</m></title>
+                    <tabular halign="center" top="medium">
+                      <row header="yes" bottom="medium">
+                        <cell><m>i</m></cell>
+                        <cell><m>t_i</m></cell>
+                        <cell><m>Y_i = (1.1)^i</m></cell>
+                        <cell><m>y(t_i) = e^{t_i}</m></cell>
+                        <cell><m>Y_i - y(t_i)</m></cell>
+                      </row>
+                      <row>
+                        <cell>1</cell><cell>0.1</cell>
+                        <cell>1.1000</cell><cell>1.1052</cell>
+                        <cell><m>-0.0052</m></cell>
+                      </row>
+                      <row>
+                        <cell>2</cell><cell>0.2</cell>
+                        <cell>1.2100</cell><cell>1.2214</cell>
+                        <cell><m>-0.0114</m></cell>
+                      </row>
+                      <row bottom="medium">
+                        <cell>3</cell><cell>0.3</cell>
+                        <cell>1.3310</cell><cell>1.3499</cell>
+                        <cell><m>-0.0189</m></cell>
+                      </row>
+                    </tabular>
+                  </table>
+
+                </solution>
             </exercise>
             <exercise>
                 <statement>
@@ -528,11 +829,155 @@
                 <hint>
                     <p>This equation is a first-order linear equation (<xref ref="firstlook05"/>), but it is possible to find the analytic solution using <em>Sage</em> (<xref ref="firstlook02-subsection-sage"/>).</p>
                 </hint>
+                <solution component="instructors">
+                  <p><em>Part (a).</em>
+                  Since <m>f(t,y) = y + t</m>, Euler's method gives
+                    <md>Y_{k+1} = Y_k + h(Y_k + t_k),</md>
+                  with <m>t_0 = 0</m> and <m>Y_0 = y(0) = 2</m>. (The condition
+                  <m>y'(0) = 2</m> gives <m>y(0) + 0 = 2</m>, so <m>y(0) = 2</m>.)
+                  </p>
+
+                  <p><em>Part (b).</em>
+                  With <m>h = 0.1</m> and <m>t_k = 0.1k</m> the iterations give
+                    <md>
+                      <mrow>Y_1 &amp;= Y_0 + 0.1(Y_0 + t_0)
+                                 = 2.0000 + 0.1(2.0000 + 0) = 2.2000,</mrow>
+                      <mrow>Y_2 &amp;= Y_1 + 0.1(Y_1 + t_1)
+                                 = 2.2000 + 0.1(2.2000 + 0.1) = 2.4300,</mrow>
+                      <mrow>Y_3 &amp;= Y_2 + 0.1(Y_2 + t_2)
+                                 = 2.4300 + 0.1(2.4300 + 0.2) = 2.6930.</mrow>
+                    </md>
+                  </p>
+
+                  <p><em>Part (c).</em>
+                  Rewrite the equation as <m>y' - y = t</m>, a first-order linear ODE
+                  with integrating factor <m>\mu = e^{-t}</m>. Multiplying through,
+                    <md>\frac{d}{dt}(e^{-t}y) = te^{-t}.</md>
+                  Integrating by parts,
+                    <md>e^{-t}y = \int te^{-t}\,dt = -te^{-t} - e^{-t} + C,</md>
+                  so <m>y = -t - 1 + Ce^t</m>. Applying <m>y(0) = 2</m> gives
+                  <m>C = 3</m>, and the exact solution is
+                    <md>y(t) = 3e^t - t - 1.</md>
+                  The exact values at the required points are
+                    <md>
+                      <mrow>y(0.1) &amp;= 3e^{0.1} - 1.1 = 2.2155,</mrow>
+                      <mrow>y(0.2) &amp;= 3e^{0.2} - 1.2 = 2.4642,</mrow>
+                      <mrow>y(0.3) &amp;= 3e^{0.3} - 1.3 = 2.7496.</mrow>
+                    </md>
+                  </p>
+
+                  <p><em>Part (d).</em>
+                  Since the exact solution is convex, Euler's method consistently
+                  underestimates the true values, with the error growing at each step.
+                  </p>
+
+                  <table>
+                    <title>Euler errors for <m>y' = y + t</m>, <m>y(0) = 2</m>,
+                    <m>h = 0.1</m></title>
+                    <tabular halign="center" top="medium">
+                      <row header="yes" bottom="medium">
+                        <cell><m>i</m></cell>
+                        <cell><m>t_i</m></cell>
+                        <cell><m>Y_i</m> (Euler)</cell>
+                        <cell><m>y(t_i) = 3e^{t_i} - t_i - 1</m></cell>
+                        <cell><m>Y_i - y(t_i)</m></cell>
+                      </row>
+                      <row>
+                        <cell>1</cell><cell>0.1</cell>
+                        <cell>2.2000</cell><cell>2.2155</cell>
+                        <cell><m>-0.0155</m></cell>
+                      </row>
+                      <row>
+                        <cell>2</cell><cell>0.2</cell>
+                        <cell>2.4300</cell><cell>2.4642</cell>
+                        <cell><m>-0.0342</m></cell>
+                      </row>
+                      <row bottom="medium">
+                        <cell>3</cell><cell>0.3</cell>
+                        <cell>2.6930</cell><cell>2.7496</cell>
+                        <cell><m>-0.0566</m></cell>
+                      </row>
+                    </tabular>
+                  </table>
+
+                </solution>
             </exercise>
             <exercise>
                 <statement>
                     <p><m>y' = 1/y</m>, <m>y'(0) = 2</m></p>
                 </statement>
+                <solution component="instructors">
+                  <p><em>Part (a).</em>
+                  Since <m>f(t,y) = 1/y</m>, Euler's method gives
+                    <md>Y_{k+1} = Y_k + \frac{h}{Y_k},</md>
+                  with <m>t_0 = 0</m> and <m>Y_0 = y(0) = \tfrac{1}{2}</m>. (The
+                  condition <m>y'(0) = 2</m> gives <m>1/y(0) = 2</m>, so
+                  <m>y(0) = \tfrac{1}{2}</m>.)
+                  </p>
+
+                  <p><em>Part (b).</em>
+                  With <m>h = 0.1</m> and <m>Y_0 = 0.5</m> the iterations give
+                    <md>
+                      <mrow>Y_1 &amp;= 0.5000 + \frac{0.1}{0.5000}
+                                 = 0.5000 + 0.2000 = 0.7000,</mrow>
+                      <mrow>Y_2 &amp;= 0.7000 + \frac{0.1}{0.7000}
+                                 = 0.7000 + 0.1429 = 0.8429,</mrow>
+                      <mrow>Y_3 &amp;= 0.8429 + \frac{0.1}{0.8429}
+                                 = 0.8429 + 0.1186 = 0.9615.</mrow>
+                    </md>
+                  </p>
+
+                  <p><em>Part (c).</em>
+                  The equation <m>y' = 1/y</m> is separable. Separating and integrating,
+                    <md>\int y\,dy = \int dt \implies \frac{y^2}{2} = t + C.</md>
+                  Applying <m>y(0) = \tfrac{1}{2}</m> gives
+                  <m>C = \tfrac{1}{8}</m>, so <m>y^2 = 2t + \tfrac{1}{4}</m>, and taking
+                  the positive root (since <m>y(0) = \tfrac{1}{2} \gt 0</m>),
+                    <md>y(t) = \sqrt{2t + \tfrac{1}{4}} = \frac{\sqrt{8t+1}}{2}.</md>
+                  The exact values at the required points are
+                    <md>
+                      <mrow>y(0.1) &amp;= \sqrt{0.45}  = 0.6708,</mrow>
+                      <mrow>y(0.2) &amp;= \sqrt{0.65}  = 0.8062,</mrow>
+                      <mrow>y(0.3) &amp;= \sqrt{0.85}  = 0.9220.</mrow>
+                    </md>
+                  </p>
+
+                  <p><em>Part (d).</em>
+                  Since <m>y'' = -1/y^3 \lt 0</m>, the exact solution is concave down,
+                  so Euler's method overestimates the true values at each step. The error
+                  decreases in magnitude as the solution flattens out.
+                  </p>
+
+                  <table>
+                    <title>Euler errors for <m>y' = 1/y</m>, <m>y(0) = 1/2</m>,
+                    <m>h = 0.1</m></title>
+                    <tabular halign="center" top="medium">
+                      <row header="yes" bottom="medium">
+                        <cell><m>i</m></cell>
+                        <cell><m>t_i</m></cell>
+                        <cell><m>Y_i</m> (Euler)</cell>
+                        <cell><m>y(t_i) = \sqrt{2t_i + 1/4}</m></cell>
+                        <cell><m>Y_i - y(t_i)</m></cell>
+                      </row>
+                      <row>
+                        <cell>1</cell><cell>0.1</cell>
+                        <cell>0.7000</cell><cell>0.6708</cell>
+                        <cell><m>+0.0292</m></cell>
+                      </row>
+                      <row>
+                        <cell>2</cell><cell>0.2</cell>
+                        <cell>0.8429</cell><cell>0.8062</cell>
+                        <cell><m>+0.0367</m></cell>
+                      </row>
+                      <row bottom="medium">
+                        <cell>3</cell><cell>0.3</cell>
+                        <cell>0.9615</cell><cell>0.9220</cell>
+                        <cell><m>+0.0395</m></cell>
+                      </row>
+                    </tabular>
+                  </table>
+
+                </solution>
             </exercise>
         </exercisegroup>
         
@@ -554,103 +999,103 @@
                     </ol></p>
             </statement>
                 <solution component="instructors">
-  <p><em>Part (a).</em>
-  Separating variables,
-    <md>\int \frac{dy}{3y-1} = \int dt
-        \implies \frac{1}{3}\ln|3y-1| = t + C.</md>
-  Exponentiating gives <m>3y - 1 = Ae^{3t}</m>, so
-  <m>y = \tfrac{1}{3}(1 + Ae^{3t})</m>. Applying <m>y(0) = 2</m>
-  gives <m>A = 5</m>, and the exact solution is
-    <md>y(t) = \frac{1 + 5e^{3t}}{3}.</md>
-  </p>
+                  <p><em>Part (a).</em>
+                  Separating variables,
+                    <md>\int \frac{dy}{3y-1} = \int dt
+                        \implies \frac{1}{3}\ln|3y-1| = t + C.</md>
+                  Exponentiating gives <m>3y - 1 = Ae^{3t}</m>, so
+                  <m>y = \tfrac{1}{3}(1 + Ae^{3t})</m>. Applying <m>y(0) = 2</m>
+                  gives <m>A = 5</m>, and the exact solution is
+                    <md>y(t) = \frac{1 + 5e^{3t}}{3}.</md>
+                  </p>
 
-  <p><em>Part (b).</em>
-  With <m>f(t,y) = 3y - 1</m> and <m>h = 0.5</m>, Euler's method gives
-  <m>Y_{i+1} = Y_i + 0.5(3Y_i - 1) = Y_i + h f(t_i, Y_i)</m>.
-  The approximate and exact values are given in the following table.
-  </p>
+                  <p><em>Part (b).</em>
+                  With <m>f(t,y) = 3y - 1</m> and <m>h = 0.5</m>, Euler's method gives
+                  <m>Y_{i+1} = Y_i + 0.5(3Y_i - 1) = Y_i + h f(t_i, Y_i)</m>.
+                  The approximate and exact values are given in the following table.
+                  </p>
 
-  <table>
-    <title>Euler approximations and exact values for
-    <m>y' = 3y-1</m>, <m>h = 0.5</m></title>
-    <tabular halign="center" top="medium">
-      <row header="yes" bottom="medium">
-        <cell><m>t_i</m></cell>
-        <cell><m>Y_i</m> (Euler)</cell>
-        <cell><m>y(t_i)</m> (Exact)</cell>
-      </row>
-      <row><cell>0.0</cell><cell>2.0000</cell><cell>2.0000</cell></row>
-      <row><cell>0.5</cell><cell>4.5000</cell><cell>7.8028</cell></row>
-      <row><cell>1.0</cell><cell>10.7500</cell><cell>33.8092</cell></row>
-      <row><cell>1.5</cell><cell>26.3750</cell><cell>150.3619</cell></row>
-      <row bottom="medium">
-        <cell>2.0</cell><cell>65.4375</cell><cell>672.7147</cell>
-      </row>
-    </tabular>
-  </table>
+                  <table>
+                    <title>Euler approximations and exact values for
+                    <m>y' = 3y-1</m>, <m>h = 0.5</m></title>
+                    <tabular halign="center" top="medium">
+                      <row header="yes" bottom="medium">
+                        <cell><m>t_i</m></cell>
+                        <cell><m>Y_i</m> (Euler)</cell>
+                        <cell><m>y(t_i)</m> (Exact)</cell>
+                      </row>
+                      <row><cell>0.0</cell><cell>2.0000</cell><cell>2.0000</cell></row>
+                      <row><cell>0.5</cell><cell>4.5000</cell><cell>7.8028</cell></row>
+                      <row><cell>1.0</cell><cell>10.7500</cell><cell>33.8092</cell></row>
+                      <row><cell>1.5</cell><cell>26.3750</cell><cell>150.3619</cell></row>
+                      <row bottom="medium">
+                        <cell>2.0</cell><cell>65.4375</cell><cell>672.7147</cell>
+                      </row>
+                    </tabular>
+                  </table>
 
-  <p><em>Part (c).</em></p>
+                  <p><em>Part (c).</em></p>
 
-               <image width="60%">
-                    <xi:include href="prefigure/firstlook04-euler-approximation-solution.xml"/>
-              </image>
+                               <image width="60%">
+                                    <xi:include href="prefigure/firstlook04-euler-approximation-solution.xml"/>
+                              </image>
 
-  <p><em>Part (d).</em>
-  Since <m>y'' = 9y - 3</m> is increasing and maximized at <m>t = 2</m>,
-  we take <m>M = 9y(2) - 3 \approx 9(672.7147) - 3 = 6051.43</m> and
-  <m>L = 3</m> (the Lipschitz constant of <m>f(t,y) = 3y-1</m> in
-  <m>y</m>). The error bound theorem gives
-    <md><mrow>|y(t_{i+1}) - Y_{i+1}|
-        \amp \leq \frac{Mh}{2L}\bigl(e^{(t_{i+1}-a)L}-1\bigr)</mrow>
-        <mrow> \amp = \frac{6051.43 \cdot 0.5}{6}\bigl(e^{3t_{i+1}}-1\bigr)</mrow>
-        <mrow>\amp \approx 504.29\bigl(e^{3t_{i+1}}-1\bigr).</mrow></md>
-  </p>
+                  <p><em>Part (d).</em>
+                  Since <m>y'' = 9y - 3</m> is increasing and maximized at <m>t = 2</m>,
+                  we take <m>M = 9y(2) - 3 \approx 9(672.7147) - 3 = 6051.43</m> and
+                  <m>L = 3</m> (the Lipschitz constant of <m>f(t,y) = 3y-1</m> in
+                  <m>y</m>). The error bound theorem gives
+                    <md><mrow>|y(t_{i+1}) - Y_{i+1}|
+                        \amp \leq \frac{Mh}{2L}\bigl(e^{(t_{i+1}-a)L}-1\bigr)</mrow>
+                        <mrow> \amp = \frac{6051.43 \cdot 0.5}{6}\bigl(e^{3t_{i+1}}-1\bigr)</mrow>
+                        <mrow>\amp \approx 504.29\bigl(e^{3t_{i+1}}-1\bigr).</mrow></md>
+                  </p>
 
-  <table>
-    <title>Error estimates for Euler's method applied to
-    <m>y' = 3y-1</m>, <m>y(0)=2</m>, <m>h = 0.5</m></title>
-    <tabular halign="center" top="medium">
-      <row header="yes" bottom="medium">
-        <cell><m>t_i</m></cell>
-        <cell><m>Y_i</m></cell>
-        <cell><m>y(t_i)</m></cell>
-        <cell>Error bound</cell>
-        <cell>Actual error</cell>
-      </row>
-      <row>
-        <cell>0.0</cell>
-        <cell>2.0000</cell><cell>2.0000</cell>
-        <cell>0.0000</cell><cell>0.0000</cell>
-      </row>
-      <row>
-        <cell>0.5</cell>
-        <cell>4.5000</cell><cell>7.8028</cell>
-        <cell>1756.00</cell><cell>3.3028</cell>
-      </row>
-      <row>
-        <cell>1.0</cell>
-        <cell>10.7500</cell><cell>33.8092</cell>
-        <cell>9625.50</cell><cell>23.0592</cell>
-      </row>
-      <row>
-        <cell>1.5</cell>
-        <cell>26.3750</cell><cell>150.3619</cell>
-        <cell>44887.00</cell><cell>123.9869</cell>
-      </row>
-      <row bottom="medium">
-        <cell>2.0</cell>
-        <cell>65.4375</cell><cell>672.7147</cell>
-        <cell>202921.00</cell><cell>607.2772</cell>
-      </row>
-    </tabular>
-  </table>
+                  <table>
+                    <title>Error estimates for Euler's method applied to
+                    <m>y' = 3y-1</m>, <m>y(0)=2</m>, <m>h = 0.5</m></title>
+                    <tabular halign="center" top="medium">
+                      <row header="yes" bottom="medium">
+                        <cell><m>t_i</m></cell>
+                        <cell><m>Y_i</m></cell>
+                        <cell><m>y(t_i)</m></cell>
+                        <cell>Error bound</cell>
+                        <cell>Actual error</cell>
+                      </row>
+                      <row>
+                        <cell>0.0</cell>
+                        <cell>2.0000</cell><cell>2.0000</cell>
+                        <cell>0.0000</cell><cell>0.0000</cell>
+                      </row>
+                      <row>
+                        <cell>0.5</cell>
+                        <cell>4.5000</cell><cell>7.8028</cell>
+                        <cell>1756.00</cell><cell>3.3028</cell>
+                      </row>
+                      <row>
+                        <cell>1.0</cell>
+                        <cell>10.7500</cell><cell>33.8092</cell>
+                        <cell>9625.50</cell><cell>23.0592</cell>
+                      </row>
+                      <row>
+                        <cell>1.5</cell>
+                        <cell>26.3750</cell><cell>150.3619</cell>
+                        <cell>44887.00</cell><cell>123.9869</cell>
+                      </row>
+                      <row bottom="medium">
+                        <cell>2.0</cell>
+                        <cell>65.4375</cell><cell>672.7147</cell>
+                        <cell>202921.00</cell><cell>607.2772</cell>
+                      </row>
+                    </tabular>
+                  </table>
 
-  <p>The error bounds are very conservative because <m>M</m> is estimated
-  using the maximum of <m>|y''|</m> over the entire interval <m>[0,2]</m>,
-  where the exact solution grows very rapidly. The actual errors are much
-  smaller but grow at the same exponential rate.</p>
+                  <p>The error bounds are very conservative because <m>M</m> is estimated
+                  using the maximum of <m>|y''|</m> over the entire interval <m>[0,2]</m>,
+                  where the exact solution grows very rapidly. The actual errors are much
+                  smaller but grow at the same exponential rate.</p>
 
-</solution>
+                </solution>
         </exercise>
 
         <exercise>
