@@ -282,7 +282,7 @@
 
         <figure xml:id="firstlook03-figure-phase-line-1">
              <image width="60%">
-                          <xi:include href="prefigure/firstlook03-phase-line-1.xml"/>
+                 <xi:include href="prefigure/firstlook03-phase-line-1.xml"/>
               </image>
             <caption>Phase line diagram for <m>y' = y^2(y + 2)(y - 2)</m></caption>
         </figure>
@@ -579,36 +579,67 @@
                 <statement>
                     <p><m>y' = 2y - 5</m>, <m>y(0) = 4</m>, <m>y(0) = 2</m>, <m>y(0) = 0</m>.</p>
                 </statement>
+                <solution component="instructors">
+                    <image width="60%">
+                    <xi:include href="prefigure/firstlook03-solution-integral-curves-14.xml"/>
+                    </image>
+                </solution>
             </exercise>
+            
 
             <exercise xml:id="firstlook03-exercise-sketching-solution-2">
                 <statement>
                     <p><m>\dfrac{dx}{dt} = (x - 1)(x + 2)</m>, <m>x(0) = 2</m>, <m>x(0) = 1</m>, <m>x(0) = 0</m>.</p>
                 </statement>
+                <solution component="instructors">
+                    <image width="60%">
+                    <xi:include href="prefigure/firstlook03-solution-integral-curves-15.xml"/>
+                    </image>
+                </solution>                
             </exercise>
 
             <exercise xml:id="firstlook03-exercise-sketching-solution-3">
                 <statement>
                     <p><m>\dfrac{dx}{dt} = (x^2 - 1)(x - 2)</m>, <m>x(0) = 1</m>, <m>x(0) = 0</m>, <m>x(0) = -1</m>.</p>
                 </statement>
+                <solution component="instructors">
+                    <image width="60%">
+                    <xi:include href="prefigure/firstlook03-solution-integral-curves-16.xml"/>
+                    </image>
+                </solution>                  
             </exercise>
 
             <exercise xml:id="firstlook03-exercise-sketching-solution-4">
                 <statement>
                     <p><m>\dfrac{dy}{dx} = \sin 2y</m>, <m>y(0) = 2</m>, <m>y(0) = 1</m>, <m>y(0) = 0</m>.</p>
                 </statement>
+                <solution component="instructors">
+                    <image width="60%">
+                    <xi:include href="prefigure/firstlook03-solution-integral-curves-17.xml"/>
+                    </image>
+                </solution>     
             </exercise>
 
             <exercise xml:id="firstlook03-exercise-sketching-solution-5">
                 <statement>
                     <p><m>x' = (x^2 + 1)(x - 1)</m>, <m>x(0) = 2</m>, <m>x(0) = 1</m>, <m>x(0) = 0</m>.</p>
                 </statement>
+                <solution component="instructors">
+                    <image width="60%">
+                    <xi:include href="prefigure/firstlook03-solution-integral-curves-18.xml"/>
+                    </image>
+                </solution>    
             </exercise>
 
             <exercise xml:id="firstlook03-exercise-sketching-solution-6">
                 <statement>
                     <p><m>x' = x^2 + x + 1</m>, <m>x(0) = 1</m>, <m>x(0) = 0</m>, <m>x(0) = -1</m>.</p>
                 </statement>
+                <solution component="instructors">
+                    <image width="60%">
+                    <xi:include href="prefigure/firstlook03-solution-integral-curves-19.xml"/>
+                    </image>
+                </solution>    
             </exercise>
         </exercisegroup>
 
@@ -627,6 +658,11 @@
 
 
                 </statement>
+                <solution component="instructors">
+                    <image width="60%">
+                        <xi:include href="prefigure/firstlook03-solution-phase-line-20.xml"/>
+                    </image>
+                </solution>  
             </exercise>
             <exercise>
                 <statement>
@@ -636,6 +672,11 @@
                         </image>
                     <!--</sidebyside>-->
                 </statement>
+                <solution component="instructors">
+                    <image width="60%">
+                        <xi:include href="prefigure/firstlook03-solution-phase-line-21.xml"/>
+                    </image>
+                </solution>  
             </exercise>
             <exercise>
                 <statement>
@@ -645,6 +686,11 @@
                         </image>
                     <!--</sidebyside>-->
                 </statement>
+                <solution component="instructors">
+                    <image width="60%">
+                        <xi:include href="prefigure/firstlook03-solution-phase-line-22.xml"/>
+                    </image>
+                </solution>  
             </exercise>
             <exercise>
                 <statement>
@@ -654,6 +700,11 @@
                         </image>
                     <!--</sidebyside>-->
                 </statement>
+                <solution component="instructors">
+                    <image width="60%">
+                    <xi:include href="prefigure/firstlook03-solution-phase-line-23.xml"/>
+                    </image>
+                </solution>  
             </exercise>
         </exercisegroup>
 
@@ -661,6 +712,10 @@
             <statement>
                 <p>What happens if we increase the harvest rate to 100 in <xref ref="firstlook03-example-harvesting" />? What should be our strategy to maintain a viable population in the trout pond and still permit fishing?</p>
             </statement>
+                <solution component="instructors">
+                    <p>The population of the trout pond will die out as
+                    <md>\frac{dP}{dt} = P\left(1 - \frac{P}{200} \right) - 100 \lt 0.</md></p>
+                </solution>    
         </exercise>
 
     </exercises>
