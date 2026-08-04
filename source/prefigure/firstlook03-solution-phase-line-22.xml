@@ -1,42 +1,30 @@
 <prefigure xmlns="https://prefigure.org"
              label="solution-phase-line-22">
 
-<diagram dimensions="(300,300)" margins="10">
-  <coordinates bbox="(-2,0,2,14)">
+<diagram dimensions="(225,300)" margins="10">
+  <coordinates bbox="(0,0,20,12)">
     <line endpoints="((0,0), (0,12))" stroke="blue"
 	  thickness="3"/>
 
-    <line endpoints="((0,12), (0,4.5))" stroke="blue"
+    <line endpoints="((0,12), (0,10.5))" stroke="blue"
 	  thickness="3" arrows="1"/>
 
-    <line endpoints="((0,10), (0,10.5))" stroke="blue"
+    <line endpoints="((0,0), (0,6))" stroke="blue"
 	  thickness="3" arrows="1"/>
 
-     <line endpoints="((0,0), (0,1.5))" stroke="blue"
-	  thickness="3" arrows="1"/>
-
-     <line endpoints="((0,12), (0,7.5))" stroke="blue"
+     <line endpoints="((0,12), (0,1))" stroke="blue"
 	  thickness="3" arrows="1"/>
 
     <point p="(0,3)" size="4"
 	   fill="blue" stroke="blue"/>
 
-    <point p="(0,6)" size="4"
-	   fill="blue" stroke="blue"/>
     <point p="(0,9)" size="4"
 	   fill="blue" stroke="blue"/>
 
-    <label alignment="east" anchor="(0.5,9)"><m>P = 2</m>is a source</label>
-    <label alignment="east" anchor="(0.5,6)"><m>P = 0</m>is a node</label>
-    <label alignment="east" anchor="(0.5,3)"><m>P = -2</m> is a sink</label>
+    <label alignment="east" anchor="(0.5,9)"><m>P = \sqrt(2 + \sqrt(10))</m>is a source</label>
+    <label alignment="east" anchor="(0.5,3)"><m>P = -\sqrt(2 + \sqrt(10))</m> is a sink</label>
 
   </coordinates>
-
-
-    <annotations>
-      <annotation ref="figure"
-        text="A phase line where P is increasing until -2 then decreasing until 0 and decreasing between 0 and 2 and increasing above 2 with P equals -2 a sink P equals 0 a node and P equals 2 a source "/>
-    </annotations>
 
 </diagram>
 </prefigure>
