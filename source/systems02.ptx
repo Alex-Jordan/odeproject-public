@@ -487,6 +487,50 @@
 
                 </ol></p>
             </statement>
+            <solution component="instructors">
+              <p>With <m>\beta = 1/2</m> the system becomes
+                <md>
+                  <mrow>\frac{dx}{dt} &amp;= x\!\left(1 - x + \frac{y}{2}\right),</mrow>
+                  <mrow>\frac{dy}{dt} &amp;= y\!\left(1 - y + \frac{x}{2}\right).</mrow>
+                </md>
+              </p>
+
+              <p><em>Part (a): Nullclines.</em>
+              The <m>x</m>-nullclines are
+                <md>x = 0 \qquad \text{and} \qquad y = 2x - 2,</md>
+              and the <m>y</m>-nullclines are
+                <md>y = 0 \qquad \text{and} \qquad y = \frac{x}{2} + 1.</md>
+              </p>
+
+              <p><em>Part (b): Equilibria.</em>
+              The equilibrium points are the intersections of an <m>x</m>-nullcline
+              with a <m>y</m>-nullcline:
+              <ul>
+                <li><p><m>(0,0)</m>: intersection of <m>x=0</m> and <m>y=0</m>.</p></li>
+                <li><p><m>(1,0)</m>: intersection of <m>y=0</m> and <m>y = 2x-2</m>.</p></li>
+                <li><p><m>(0,1)</m>: intersection of <m>x=0</m> and <m>y = x/2+1</m>.</p></li>
+                <li><p><m>(2,2)</m>: intersection of <m>y = 2x-2</m> and <m>y = x/2+1</m>,
+                found by solving <m>2x-2 = x/2+1</m> to get <m>x=2</m>,
+                <m>y=2</m>.</p></li>
+              </ul>
+              </p>
+
+              <p><em>Part (c): Phase plane.</em></p>
+
+                             <image width="60%">
+                                      <xi:include href="prefigure/systems02-solution-nullclines-1.xml"/>
+                            </image>
+
+              <p><em>Part (d).</em>
+              Starting at <m>(x(0), y(0)) = (2.4, 0.3)</m>, the trajectory lies in
+              the basin of attraction of the stable equilibrium <m>(2,2)</m>. As
+              <m>t \to \infty</m>, both populations converge to
+                <md>\lim_{t\to\infty} x(t) = 2, \qquad \lim_{t\to\infty} y(t) = 2.</md>
+              The two species cooperate and both stabilize at a carrying capacity
+              above the single-species equilibrium of <m>1</m>.
+              </p>
+
+            </solution>
         </exercise>
 
 
