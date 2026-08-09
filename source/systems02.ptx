@@ -536,7 +536,7 @@
 
        <exercisegroup xml:id="systems02-exercises-phase-planes">
             <title>Plotting Phase Portraits</title>
-            <introduction><p>For the following two systems of equations
+            <introduction><p>For the following systems of equations
                     <ul>
 
                         <li><p>Find the equilibrium points of the system.</p></li>
@@ -553,6 +553,28 @@
                         <mrow>y' &amp; = -x + y</mrow>
                         </md></p>
                 </statement>
+                <solution component="instructors">
+                  <p><em>Equilibria.</em>
+                  Setting <m>x' = 3x + 4y = 0</m> and <m>y' = -x + y = 0</m>, the
+                  second equation gives <m>y = x</m>. Substituting into the first gives
+                  <m>7x = 0</m>, so <m>x = 0</m> and <m>y = 0</m>. The only equilibrium
+                  is <m>(0, 0)</m>.
+                  </p>
+
+                  <p><em>Phase plane.</em></p>
+
+                   <image width="60%">
+                     <xi:include href="prefigure/systems02-solution-2.xml"/>
+                  </image>
+
+                  <p><em>Behavior of typical solutions.</em>
+                  Every solution except the equilibrium <m>(0,0)</m> spirals outward
+                  away from the origin as <m>t \to \infty</m>, with both <m>|x(t)|</m>
+                  and <m>|y(t)|</m> growing without bound. The rotation is
+                  counterclockwise.
+                  </p>
+
+                </solution>
             </exercise>
             <exercise>
                 <statement>
@@ -561,6 +583,27 @@
                         <mrow>y' &amp; = -x + y</mrow>
                         </md></p>
                 </statement>
+                <solution component="instructors">
+                  <p><em>Equilibria.</em>
+                  Setting <m>x' = -3x + 4y = 0</m> and <m>y' = -x + y = 0</m>, the
+                  second equation gives <m>y = x</m>. Substituting into the first gives
+                  <m>x = 0</m> and <m>y = 0</m>. The only equilibrium is
+                  <m>(0, 0)</m>.
+                  </p>
+
+                  <p><em>Phase plane.</em></p>
+
+                    <image width="60%">
+                     <xi:include href="prefigure/systems02-solution-3.xml"/>
+                    </image>
+
+                  <p><em>Behavior of typical solutions.</em>
+                  Since <m>\lambda = -1 \lt 0</m>, every solution tends to the origin as
+                  <m>t \to \infty</m>. Trajectories curve and approach the origin. No solution oscillates; all
+                  decay monotonically to zero.
+                  </p>
+
+                </solution>
             </exercise>
             <exercise>
                 <statement>
@@ -569,6 +612,30 @@
                         <mrow>y' &amp; = x + 6y</mrow>
                         </md></p>
                 </statement>
+                <solution component="instructors">
+                  <p><em>Equilibria.</em>
+                  Setting <m>x' = -3x + 4y = 0</m> and <m>y' = x + 6y = 0</m>, the
+                  second equation gives <m>x = -6y</m>. Substituting into the first gives
+                  <m>18y + 4y = 22y = 0</m>, so <m>y = 0</m> and <m>x = 0</m>. The only
+                  equilibrium is <m>(0, 0)</m>.
+                  </p>
+
+                  <p><em>Phase plane.</em></p>
+
+                   <image width="60%">
+                     <xi:include href="prefigure/systems02-solution-4.xml"/>
+                  </image>
+                  
+                  <p><em>Behavior of typical solutions.</em>
+                  The origin is an unstable saddle. The stable manifold, tangent to
+                  <m>\mathbf{v}_2 \approx (4, -0.42)^T</m>, consists of two trajectories
+                  that approach the origin as <m>t \to \infty</m>; all other solutions are
+                  repelled. Generic trajectories approach the origin. Both
+                  <m>|x(t)|</m> and <m>|y(t)|</m> grow without bound for almost all
+                  initial conditions.
+                  </p>
+
+                </solution>
             </exercise>
             <exercise>
                 <statement>
@@ -577,6 +644,39 @@
                         <mrow>y' &amp; = -x + y</mrow>
                         </md></p>
                 </statement>
+
+                <solution component="instructors">
+                  <p><em>Equilibria.</em>
+                  Setting <m>x' = \cos y = 0</m> gives <m>y = \tfrac{\pi}{2} + n\pi</m>
+                  for any integer <m>n</m>. Setting <m>y' = -x + y = 0</m> gives
+                  <m>x = y</m>. Therefore the equilibrium points are
+                    <md>\left(\frac{\pi}{2} + n\pi,\; \frac{\pi}{2} + n\pi\right),
+                        \qquad n \in \mathbb{Z},</md>
+                  i.e., <m>\ldots,\;(-\tfrac{\pi}{2},-\tfrac{\pi}{2}),\;
+                  (\tfrac{\pi}{2},\tfrac{\pi}{2}),\;
+                  (\tfrac{3\pi}{2},\tfrac{3\pi}{2}),\;\ldots</m>
+                  </p>
+
+                  <p><em>Phase plane.</em></p>
+
+                    <image width="60%">
+                     <xi:include href="prefigure/systems02-solution-5.xml"/>
+                    </image>
+
+                  <p><em>Behavior of typical solutions.</em>
+                  The system has infinitely many equilibria arranged periodically along
+                  the line <m>x = y</m>, alternating between saddles (at even <m>n</m>)
+                  and unstable spirals (at odd <m>n</m>). Trajectories near an unstable
+                  spiral wind outward and are eventually captured by the stable manifold
+                  of an adjacent saddle, then expelled along its unstable manifold toward
+                  the next unstable spiral. Solutions generically diverge to infinity,
+                  though their paths are guided by the repeating saddle-spiral structure.
+                  No bounded attracting regions exist for this system.
+                  </p>
+
+                </solution>
+
+
             </exercise>
             <exercise>
                 <statement>
@@ -585,6 +685,50 @@
                         <mrow>y' &amp; = -x + y - xy</mrow>
                         </md></p>
                 </statement>
+
+                <solution component="instructors">
+                  <p><em>Equilibria.</em>
+                  Setting <m>y' = -x + y - xy = 0</m> gives <m>y(1-x) = x</m>, so
+                  <m>y = x/(1-x)</m> for <m>x \neq 1</m>. Substituting into
+                  <m>x' = -3x + 4y + x^2 = 0</m> and factoring out <m>x</m> yields
+                  either <m>x = 0</m> (giving <m>y = 0</m>) or
+                    <md>x^2 - 4x - 1 = 0 \implies x = 2 \pm \sqrt{5}.</md>
+                  The corresponding <m>y</m>-values are
+                  <m>y = -(3+\sqrt{5})/4</m> and <m>y = (\sqrt{5}-3)/4</m> respectively.
+                  The three equilibrium points are
+                  <ul>
+                    <li><p><m>(0,\, 0)</m>,</p></li>
+                    <li><p><m>\bigl(2-\sqrt{5},\; \tfrac{\sqrt{5}-3}{4}\bigr)
+                        \approx (-0.236,\,-0.191)</m>,</p></li>
+                    <li><p><m>\bigl(2+\sqrt{5},\; -\tfrac{3+\sqrt{5}}{4}\bigr)
+                        \approx (4.236,\,-1.309)</m>.</p></li>
+                  </ul>
+                  </p>
+
+
+
+                  <p><em>Phase plane.</em></p>
+
+                    <image width="60%">
+                     <xi:include href="prefigure/systems02-solution-6.xml"/>
+                    </image>
+
+
+                  <p><em>Behavior of typical solutions.</em>
+                  The origin is a stable improper node with a basin of attraction bounded
+                  by the stable manifolds of the two saddle points. Trajectories starting
+                  near <m>(0,0)</m> converge to the origin tangent to the repeated
+                  eigenvector direction. The saddle at
+                  <m>(2-\sqrt{5},\,(\sqrt{5}-3)/4)</m> lies close to the origin and
+                  partitions the phase plane; its stable manifold forms part of the
+                  boundary of the basin of attraction of the origin. Trajectories outside
+                  this basin diverge to infinity, guided by the unstable manifolds of the
+                  two saddles. Solutions starting far from the origin in the direction of
+                  positive <m>x</m> generally diverge rapidly due to the <m>x^2</m> term.
+                  </p>
+
+                </solution>
+
             </exercise>
 
         </exercisegroup>
@@ -622,7 +766,80 @@
 
                     </ol></p>
             </statement>
+                <solution component="instructors">
+  <p>The <m>S</m>-nullclines are <m>S = 0</m> and
+  <m>I = 0.0003/\alpha</m>; the <m>I</m>-nullclines are <m>I = 0</m>
+  and <m>S = 0.1/\alpha</m>. The biologically relevant equilibria are
+  the disease-free states <m>(S_0, 0)</m> for any <m>S_0 \geq 0</m>
+  and the interior endemic equilibrium
+    <md>\left(\frac{0.1}{\alpha},\; \frac{0.0003}{\alpha}\right).</md>
+  Whether the disease spreads or dies out depends on whether the initial
+  susceptible population <m>S(0)</m> exceeds the threshold
+  <m>S^* = 0.1/\alpha</m>: if <m>S(0) \gt S^*</m> then
+  <m>dI/dt \gt 0</m> initially and an epidemic occurs; if
+  <m>S(0) \lt S^*</m> the infection dies out.
+  </p>
 
+  <p><em>Part (a): <m>\alpha = 0.05</m> (high infectivity, e.g. Ebola).</em></p>
+
+  <p>The threshold is <m>S^* = 0.1/0.05 = 2</m> and the endemic
+  equilibrium is at <m>(2,\; 0.006)</m>. Since <m>S(0) = 1000 \gg 2</m>,
+  the epidemic explodes immediately: <m>I</m> rises rapidly while
+  <m>S</m> is driven sharply downward. The solution curve sweeps to the
+  left and downward, eventually approaching the <m>S</m>-axis (disease
+  dies out after nearly the entire susceptible population has been
+  exposed). As <m>t \to \infty</m>, <m>I(t) \to 0</m> and <m>S(t)</m>
+  approaches a small positive value near zero.
+  </p>
+
+    <image width="60%">
+    <xi:include href="prefigure/systems02-solution-7a.xml"/>
+    </image> 
+
+
+  <p><em>Part (b): <m>\alpha = 0.000001</m> (low infectivity, e.g. HIV).</em></p>
+
+  <p>The threshold is <m>S^* = 0.1/0.000001 = 100{,}000</m> and the
+  endemic equilibrium is at <m>(100000,\; 300)</m>. Since
+  <m>S(0) = 30{,}000 \lt 100{,}000</m>, we have
+  <m>\alpha S(0) - 0.1 = 0.03 - 0.1 = -0.07 \lt 0</m>, so
+  <m>dI/dt \lt 0</m> immediately. The infected population decreases
+  monotonically to zero while the susceptible population grows due to
+  births. As <m>t \to \infty</m>, <m>I(t) \to 0</m> and <m>S(t)</m>
+  grows (the disease dies out and the population recovers).
+  </p>
+
+
+    <image width="60%">
+    <xi:include href="prefigure/systems02-solution-7b.xml"/>
+    </image> 
+ 
+  <p><em>Part (c): Conclusions.</em>
+  The key quantity governing epidemic behavior is the threshold
+  <m>S^* = 0.1/\alpha</m>:
+  <ul>
+    <li><p>When <m>\alpha</m> is large (highly infectious disease like
+    Ebola, <m>\alpha = 0.05</m>), the threshold <m>S^* = 2</m> is
+    extremely low. Almost any population will exceed this threshold, so
+    an epidemic is virtually inevitable and spreads explosively, infecting
+    nearly the entire susceptible population before dying out.</p></li>
+    <li><p>When <m>\alpha</m> is small (low-transmission disease like HIV,
+    <m>\alpha = 0.000001</m>), the threshold <m>S^* = 100{,}000</m> is
+    very high. Populations below this threshold see the disease die out
+    naturally; only very large susceptible populations sustain an epidemic.
+    Birth rates can maintain susceptible populations, but the slow
+    transmission means the disease spreads gradually rather than
+    explosively.</p></li>
+    <li><p>In both cases, the long-term fate of the epidemic is determined
+    by the relationship between the initial susceptible population and the
+    threshold <m>S^* = 0.1/\alpha</m>. Public health interventions that
+    reduce <m>\alpha</m> (e.g., protective equipment, quarantine) or
+    reduce <m>S</m> (e.g., vaccination) can push a population below the
+    threshold and cause the disease to die out.</p></li>
+  </ul>
+  </p>
+
+</solution>
         </exercise>
 
     </exercises>
