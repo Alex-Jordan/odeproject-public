@@ -767,77 +767,77 @@
                     </ol></p>
             </statement>
                 <solution component="instructors">
-  <p>The <m>S</m>-nullclines are <m>S = 0</m> and
-  <m>I = 0.0003/\alpha</m>; the <m>I</m>-nullclines are <m>I = 0</m>
-  and <m>S = 0.1/\alpha</m>. The biologically relevant equilibria are
-  the disease-free states <m>(S_0, 0)</m> for any <m>S_0 \geq 0</m>
-  and the interior endemic equilibrium
-    <md>\left(\frac{0.1}{\alpha},\; \frac{0.0003}{\alpha}\right).</md>
-  Whether the disease spreads or dies out depends on whether the initial
-  susceptible population <m>S(0)</m> exceeds the threshold
-  <m>S^* = 0.1/\alpha</m>: if <m>S(0) \gt S^*</m> then
-  <m>dI/dt \gt 0</m> initially and an epidemic occurs; if
-  <m>S(0) \lt S^*</m> the infection dies out.
-  </p>
+                  <p>The <m>S</m>-nullclines are <m>S = 0</m> and
+                  <m>I = 0.0003/\alpha</m>; the <m>I</m>-nullclines are <m>I = 0</m>
+                  and <m>S = 0.1/\alpha</m>. The biologically relevant equilibria are
+                  the disease-free states <m>(S_0, 0)</m> for any <m>S_0 \geq 0</m>
+                  and the interior endemic equilibrium
+                    <md>\left(\frac{0.1}{\alpha},\; \frac{0.0003}{\alpha}\right).</md>
+                  Whether the disease spreads or dies out depends on whether the initial
+                  susceptible population <m>S(0)</m> exceeds the threshold
+                  <m>S^* = 0.1/\alpha</m>: if <m>S(0) \gt S^*</m> then
+                  <m>dI/dt \gt 0</m> initially and an epidemic occurs; if
+                  <m>S(0) \lt S^*</m> the infection dies out.
+                  </p>
 
-  <p><em>Part (a): <m>\alpha = 0.05</m> (high infectivity, e.g. Ebola).</em></p>
+                  <p><em>Part (a): <m>\alpha = 0.05</m> (high infectivity, e.g. Ebola).</em></p>
 
-  <p>The threshold is <m>S^* = 0.1/0.05 = 2</m> and the endemic
-  equilibrium is at <m>(2,\; 0.006)</m>. Since <m>S(0) = 1000 \gg 2</m>,
-  the epidemic explodes immediately: <m>I</m> rises rapidly while
-  <m>S</m> is driven sharply downward. The solution curve sweeps to the
-  left and downward, eventually approaching the <m>S</m>-axis (disease
-  dies out after nearly the entire susceptible population has been
-  exposed). As <m>t \to \infty</m>, <m>I(t) \to 0</m> and <m>S(t)</m>
-  approaches a small positive value near zero.
-  </p>
+                  <p>The threshold is <m>S^* = 0.1/0.05 = 2</m> and the endemic
+                  equilibrium is at <m>(2,\; 0.006)</m>. Since <m>S(0) = 1000 \gg 2</m>,
+                  the epidemic explodes immediately: <m>I</m> rises rapidly while
+                  <m>S</m> is driven sharply downward. The solution curve sweeps to the
+                  left and downward, eventually approaching the <m>S</m>-axis (disease
+                  dies out after nearly the entire susceptible population has been
+                  exposed). As <m>t \to \infty</m>, <m>I(t) \to 0</m> and <m>S(t)</m>
+                  approaches a small positive value near zero.
+                  </p>
 
-    <image width="60%">
-    <xi:include href="prefigure/systems02-solution-7a.xml"/>
-    </image> 
-
-
-  <p><em>Part (b): <m>\alpha = 0.000001</m> (low infectivity, e.g. HIV).</em></p>
-
-  <p>The threshold is <m>S^* = 0.1/0.000001 = 100{,}000</m> and the
-  endemic equilibrium is at <m>(100000,\; 300)</m>. Since
-  <m>S(0) = 30{,}000 \lt 100{,}000</m>, we have
-  <m>\alpha S(0) - 0.1 = 0.03 - 0.1 = -0.07 \lt 0</m>, so
-  <m>dI/dt \lt 0</m> immediately. The infected population decreases
-  monotonically to zero while the susceptible population grows due to
-  births. As <m>t \to \infty</m>, <m>I(t) \to 0</m> and <m>S(t)</m>
-  grows (the disease dies out and the population recovers).
-  </p>
+                    <image width="60%">
+                    <xi:include href="prefigure/systems02-solution-7a.xml"/>
+                    </image> 
 
 
-    <image width="60%">
-    <xi:include href="prefigure/systems02-solution-7b.xml"/>
-    </image> 
- 
-  <p><em>Part (c): Conclusions.</em>
-  The key quantity governing epidemic behavior is the threshold
-  <m>S^* = 0.1/\alpha</m>:
-  <ul>
-    <li><p>When <m>\alpha</m> is large (highly infectious disease like
-    Ebola, <m>\alpha = 0.05</m>), the threshold <m>S^* = 2</m> is
-    extremely low. Almost any population will exceed this threshold, so
-    an epidemic is virtually inevitable and spreads explosively, infecting
-    nearly the entire susceptible population before dying out.</p></li>
-    <li><p>When <m>\alpha</m> is small (low-transmission disease like HIV,
-    <m>\alpha = 0.000001</m>), the threshold <m>S^* = 100{,}000</m> is
-    very high. Populations below this threshold see the disease die out
-    naturally; only very large susceptible populations sustain an epidemic.
-    Birth rates can maintain susceptible populations, but the slow
-    transmission means the disease spreads gradually rather than
-    explosively.</p></li>
-    <li><p>In both cases, the long-term fate of the epidemic is determined
-    by the relationship between the initial susceptible population and the
-    threshold <m>S^* = 0.1/\alpha</m>. Public health interventions that
-    reduce <m>\alpha</m> (e.g., protective equipment, quarantine) or
-    reduce <m>S</m> (e.g., vaccination) can push a population below the
-    threshold and cause the disease to die out.</p></li>
-  </ul>
-  </p>
+                  <p><em>Part (b): <m>\alpha = 0.000001</m> (low infectivity, e.g. HIV).</em></p>
+
+                  <p>The threshold is <m>S^* = 0.1/0.000001 = 100{,}000</m> and the
+                  endemic equilibrium is at <m>(100000,\; 300)</m>. Since
+                  <m>S(0) = 30{,}000 \lt 100{,}000</m>, we have
+                  <m>\alpha S(0) - 0.1 = 0.03 - 0.1 = -0.07 \lt 0</m>, so
+                  <m>dI/dt \lt 0</m> immediately. The infected population decreases
+                  monotonically to zero while the susceptible population grows due to
+                  births. As <m>t \to \infty</m>, <m>I(t) \to 0</m> and <m>S(t)</m>
+                  grows (the disease dies out and the population recovers).
+                  </p>
+
+
+                    <image width="60%">
+                    <xi:include href="prefigure/systems02-solution-7b.xml"/>
+                    </image> 
+                 
+                  <p><em>Part (c): Conclusions.</em>
+                  The key quantity governing epidemic behavior is the threshold
+                  <m>S^* = 0.1/\alpha</m>:
+                  <ul>
+                    <li><p>When <m>\alpha</m> is large (highly infectious disease like
+                    Ebola, <m>\alpha = 0.05</m>), the threshold <m>S^* = 2</m> is
+                    extremely low. Almost any population will exceed this threshold, so
+                    an epidemic is virtually inevitable and spreads explosively, infecting
+                    nearly the entire susceptible population before dying out.</p></li>
+                    <li><p>When <m>\alpha</m> is small (low-transmission disease like HIV,
+                    <m>\alpha = 0.000001</m>), the threshold <m>S^* = 100{,}000</m> is
+                    very high. Populations below this threshold see the disease die out
+                    naturally; only very large susceptible populations sustain an epidemic.
+                    Birth rates can maintain susceptible populations, but the slow
+                    transmission means the disease spreads gradually rather than
+                    explosively.</p></li>
+                    <li><p>In both cases, the long-term fate of the epidemic is determined
+                    by the relationship between the initial susceptible population and the
+                    threshold <m>S^* = 0.1/\alpha</m>. Public health interventions that
+                    reduce <m>\alpha</m> (e.g., protective equipment, quarantine) or
+                    reduce <m>S</m> (e.g., vaccination) can push a population below the
+                    threshold and cause the disease to die out.</p></li>
+                  </ul>
+                  </p>
 
 </solution>
         </exercise>
