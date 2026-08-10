@@ -1,0 +1,22 @@
+<prefigure xmlns="https://prefigure.org"
+             label="solution-7b">
+
+<diagram dimensions="(300,300)" margins="60">
+  <definition>alpha = 0.000001</definition>
+  <definition>f(t,y) = (-alpha*y[0]*y[1] + 0.0003*y[0],alpha*y[0]*y[1] - 0.1*y[1])</definition>
+  <coordinates bbox="[0,0,150000,10000]">
+    <grid-axes xlabel="S(t)" ylabel="I(t)"/>
+
+    <definition>gap = 1/2</definition>
+    <slope-field function="f" system="yes" stroke="black"
+     arrows="yes" thickness="1" spacings="((0,gap,9),(0,gap/2,2.5))"/>
+
+    <plot-de-solution function="f" t0="0" t1="10000" 
+          y0="(30000,1)" axes="(y0,y1)" arrow="yes" N="1500" stroke="red" thickness="3"/>
+
+  </coordinates>
+
+  
+</diagram>
+
+</prefigure>
