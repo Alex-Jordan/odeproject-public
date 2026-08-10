@@ -397,6 +397,35 @@
                         <mrow>y' &amp; = x + 2y</mrow>
                     </md></p>
                 </statement>
+                <solution component="instructors">
+                  <p>The system is partially coupled: the first equation depends only on
+                  <m>x</m> and can be solved independently.
+                  </p>
+
+                  <p><em>Step 1: Solve for <m>x(t)</m>.</em>
+                  The equation <m>x' = 2x</m> is separable with solution
+                    <md>x(t) = c_1 e^{2t}.</md>
+                  </p>
+
+                  <p><em>Step 2: Solve for <m>y(t)</m>.</em>
+                  Substituting <m>x(t) = c_1 e^{2t}</m> into <m>y' = x + 2y</m> gives
+                  the first-order linear equation
+                    <md>y' - 2y = c_1 e^{2t}.</md>
+                  The integrating factor is <m>\mu(t) = e^{-2t}</m>. Multiplying through,
+                    <md>\frac{d}{dt}\!\left(e^{-2t} y\right) = c_1,</md>
+                  and integrating both sides,
+                    <md>e^{-2t} y = c_1 t + c_2.</md>
+                  Solving for <m>y</m>,
+                    <md>y(t) = c_1 t e^{2t} + c_2 e^{2t}.</md>
+                  </p>
+
+                  <p>The general solution of the system is
+                    <md>\mathbf{x}(t) =
+                        c_1 e^{2t} \begin{pmatrix} 1 \\ t \end{pmatrix}
+                      + c_2 e^{2t} \begin{pmatrix} 0 \\ 1 \end{pmatrix},</md>
+                  where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+                  </p>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
@@ -405,6 +434,35 @@
                         <mrow>y' &amp; = -2y</mrow>
                     </md></p>
                 </statement>
+                <solution component="instructors">
+                  <p>The system is partially coupled: the second equation depends only on
+                  <m>y</m> and can be solved independently.
+                  </p>
+
+                  <p><em>Step 1: Solve for <m>y(t)</m>.</em>
+                  The equation <m>y' = -2y</m> is separable with solution
+                    <md>y(t) = c_1 e^{-2t}.</md>
+                  </p>
+
+                  <p><em>Step 2: Solve for <m>x(t)</m>.</em>
+                  Substituting <m>y(t) = c_1 e^{-2t}</m> into <m>x' = -x + 3y</m>
+                  gives the first-order linear equation
+                    <md>x' + x = 3c_1 e^{-2t}.</md>
+                  The integrating factor is <m>\mu(t) = e^{t}</m>. Multiplying through,
+                    <md>\frac{d}{dt}\!\left(e^{t} x\right) = 3c_1 e^{-t},</md>
+                  and integrating both sides,
+                    <md>e^{t} x = -3c_1 e^{-t} + c_2.</md>
+                  Solving for <m>x</m>,
+                    <md>x(t) = -3c_1 e^{-2t} + c_2 e^{-t}.</md>
+                  </p>
+
+                  <p>The general solution of the system is
+                    <md>\mathbf{x}(t) =
+                        c_1 e^{-2t} \begin{pmatrix} -3 \\ 1 \end{pmatrix}
+                      + c_2 e^{-t}  \begin{pmatrix}  1 \\ 0 \end{pmatrix},</md>
+                  where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+                  </p>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
@@ -413,6 +471,35 @@
                         <mrow>y' &amp; = 2x + 3y</mrow>
                     </md></p>
                 </statement>
+                <solution component="instructors">
+                  <p>The system is partially coupled: the first equation depends only on
+                  <m>x</m> and can be solved independently.
+                  </p>
+
+                  <p><em>Step 1: Solve for <m>x(t)</m>.</em>
+                  The equation <m>x' = -3x</m> is separable with solution
+                    <md>x(t) = c_1 e^{-3t}.</md>
+                  </p>
+
+                  <p><em>Step 2: Solve for <m>y(t)</m>.</em>
+                  Substituting <m>x(t) = c_1 e^{-3t}</m> into <m>y' = 2x + 3y</m>
+                  gives the first-order linear equation
+                    <md>y' - 3y = 2c_1 e^{-3t}.</md>
+                  The integrating factor is <m>\mu(t) = e^{-3t}</m>. Multiplying through,
+                    <md>\frac{d}{dt}\!\left(e^{-3t} y\right) = 2c_1 e^{-6t},</md>
+                  and integrating both sides,
+                    <md>e^{-3t} y = -\frac{c_1}{3} e^{-6t} + c_2.</md>
+                  Solving for <m>y</m>,
+                    <md>y(t) = -\frac{c_1}{3} e^{-3t} + c_2 e^{3t}.</md>
+                  </p>
+
+                  <p>The general solution of the system is
+                    <md>\mathbf{x}(t) =
+                        c_1 e^{-3t} \begin{pmatrix} 1 \\ -1/3 \end{pmatrix}
+                      + c_2 e^{3t}  \begin{pmatrix} 0 \\ 1   \end{pmatrix},</md>
+                  where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+                  </p>
+                </solution>
             </exercise>
             <exercise>
                 <statement>
@@ -421,6 +508,35 @@
                         <mrow>y' &amp; = 4y</mrow>
                     </md></p>
                 </statement>
+                <solution component="instructors">
+                  <p>The system is partially coupled: the second equation depends only on
+                  <m>y</m> and can be solved independently.
+                  </p>
+
+                  <p><em>Step 1: Solve for <m>y(t)</m>.</em>
+                  The equation <m>y' = 4y</m> is separable with solution
+                    <md>y(t) = c_1 e^{4t}.</md>
+                  </p>
+
+                  <p><em>Step 2: Solve for <m>x(t)</m>.</em>
+                  Substituting <m>y(t) = c_1 e^{4t}</m> into <m>x' = 2x - 3y</m>
+                  gives the first-order linear equation
+                    <md>x' - 2x = -3c_1 e^{4t}.</md>
+                  The integrating factor is <m>\mu(t) = e^{-2t}</m>. Multiplying through,
+                    <md>\frac{d}{dt}\!\left(e^{-2t} x\right) = -3c_1 e^{2t},</md>
+                  and integrating both sides,
+                    <md>e^{-2t} x = -\frac{3c_1}{2} e^{2t} + c_2.</md>
+                  Solving for <m>x</m>,
+                    <md>x(t) = -\frac{3c_1}{2} e^{4t} + c_2 e^{2t}.</md>
+                  </p>
+
+                  <p>The general solution of the system is
+                    <md>\mathbf{x}(t) =
+                        c_1 e^{4t} \begin{pmatrix} -3/2 \\ 1 \end{pmatrix}
+                      + c_2 e^{2t} \begin{pmatrix}  1   \\ 0 \end{pmatrix},</md>
+                  where <m>c_1</m> and <m>c_2</m> are arbitrary constants.
+                  </p>
+                </solution>
             </exercise>
         </exercisegroup>        
 
@@ -428,6 +544,59 @@
 	    	<statement>
 	    		<p>Suppose that we have two tanks (<m>A</m> and <m>B</m>) between which a mixture of brine flows. Tank <m>A</m> contains 200 liters of water in which 20 kilograms of salt has been dissolved and Tank <m>B</m> contains 200 liters of water in which 10 kilograms of salt has been dissolved. Fresh water is pumped into Tank <m>A</m> at the rate of 200 liters per hour, and brine is pumped into Tank <m>B</m> from Tank <m>A</m> at the rate of 200 liters per hour. Brine is also drained at a rate 200 liters of brine per hour from Tank <m>B</m>. All brine mixtures are well-stirred.  Find the amount of salt in each tank at time <m>t</m>.</p>
 	    	</statement>
+                <solution component="instructors">
+                  <p>Let <m>x(t)</m> be the amount of salt (in kilograms) in Tank
+                  <m>A</m> and <m>y(t)</m> the amount in Tank <m>B</m> at time
+                  <m>t</m> (in hours). Since each tank has a constant volume of
+                  200 liters, the concentrations are <m>x/200</m> and <m>y/200</m>
+                  kg/L respectively.
+                  </p>
+
+                  <p>Fresh water (zero salt) flows into Tank <m>A</m> at
+                  200 L/hr, and brine leaves Tank <m>A</m> into Tank <m>B</m> at
+                  200 L/hr, so
+                    <md>\frac{dx}{dt} = 0 - 200 \cdot \frac{x}{200} = -x.</md>
+                  Brine flows from Tank <m>A</m> into Tank <m>B</m> at 200 L/hr and
+                  drains from Tank <m>B</m> at 200 L/hr, so
+                    <md>\frac{dy}{dt} = 200 \cdot \frac{x}{200} - 200 \cdot \frac{y}{200}
+                        = x - y.</md>
+                  The initial value problem is therefore
+                    <md>
+                      <mrow>x' &amp;= -x, &amp; x(0) &amp;= 20,</mrow>
+                      <mrow>y' &amp;= x - y, &amp; y(0) &amp;= 10.</mrow>
+                    </md>
+                  </p>
+
+                  <p><em>Step 1: Solve for <m>x(t)</m>.</em>
+                  The equation <m>x' = -x</m> is separable with general solution
+                  <m>x = c_1 e^{-t}</m>. Applying <m>x(0) = 20</m> gives
+                    <md>x(t) = 20e^{-t}.</md>
+                  </p>
+
+                  <p><em>Step 2: Solve for <m>y(t)</m>.</em>
+                  Substituting <m>x(t) = 20e^{-t}</m> into <m>y' = x - y</m> gives
+                  the first-order linear equation
+                    <md>y' + y = 20e^{-t}.</md>
+                  The integrating factor is <m>\mu(t) = e^{t}</m>. Multiplying through,
+                    <md>\frac{d}{dt}\!\left(e^{t} y\right) = 20,</md>
+                  and integrating both sides,
+                    <md>e^{t} y = 20t + c_2.</md>
+                  Solving for <m>y</m>,
+                    <md>y(t) = (20t + c_2)e^{-t}.</md>
+                  Applying <m>y(0) = 10</m> gives <m>c_2 = 10</m>, so
+                    <md>y(t) = (20t + 10)e^{-t}.</md>
+                  </p>
+
+                  <p>The amount of salt in each tank at time <m>t</m> is
+                    <md>
+                      <mrow>x(t) &amp;= 20e^{-t},</mrow>
+                      <mrow>y(t) &amp;= (20t + 10)e^{-t}.</mrow>
+                    </md>
+                  As <m>t \to \infty</m>, both <m>x(t) \to 0</m> and
+                  <m>y(t) \to 0</m>, since the continuous inflow of fresh water
+                  eventually flushes all salt from the system.
+                  </p>
+                </solution>
 	    </exercise>
 
 	    <exercise>
@@ -455,6 +624,71 @@
 
 	    			</ol></p>
 	    	</statement>
+            <solution component="instructors">
+  <ol>
+    <li>
+      <p>Setting <m>p = y</m> and <m>q = y'</m>, the equation
+      <m>y'' + 7y' + 6y = 0</m> becomes the first-order system
+        <md>
+          <mrow>p' &amp;= q,</mrow>
+          <mrow>q' &amp;= -6p - 7q,</mrow>
+        </md>
+      with <m>p(0) = 1</m> and <m>q(0) = 0</m>.
+      The general solution is <m>y = c_1 e^{-t} + c_2 e^{-6t}</m>.
+      Applying the initial conditions,
+        <md>
+          <mrow>c_1 + c_2 &amp;= 1,</mrow>
+          <mrow>-c_1 - 6c_2 &amp;= 0,</mrow>
+        </md>
+      giving <m>c_1 = 6/5</m> and <m>c_2 = -1/5</m>. The solution is
+        <md>y(t) = \frac{6}{5}e^{-t} - \frac{1}{5}e^{-6t}.</md>
+      The solution decays to zero without oscillating.
+      </p>
+    </li>
+
+    <li>
+      <p>Setting <m>p = y</m> and <m>q = y'</m>, the equation
+      <m>y'' + 4y' + 5y = 0</m> becomes the first-order system
+        <md>
+          <mrow>p' &amp;= q,</mrow>
+          <mrow>q' &amp;= -5p - 4q,</mrow>
+        </md>
+      with <m>p(0) = 1</m> and <m>q(0) = 0</m>.
+      The general solution is
+      <m>y = e^{-2t}(c_1 \cos t + c_2 \sin t)</m>.
+      Applying the initial conditions,
+        <md>
+          <mrow>c_1 &amp;= 1,</mrow>
+          <mrow>-2c_1 + c_2 &amp;= 0,</mrow>
+        </md>
+      giving <m>c_1 = 1</m> and <m>c_2 = 2</m>. The solution is
+        <md>y(t) = e^{-2t}(\cos t + 2\sin t).</md>
+      The solution oscillates with exponentially decreasing amplitude.
+      </p>
+    </li>
+
+    <li>
+      <p>Setting <m>p = y</m> and <m>q = y'</m>, the equation
+      <m>y'' + 6y' + 9y = 0</m> becomes the first-order system
+        <md>
+          <mrow>p' &amp;= q,</mrow>
+          <mrow>q' &amp;= -9p - 6q,</mrow>
+        </md>
+      with <m>p(0) = 1</m> and <m>q(0) = 0</m>.
+      The general solution is <m>y = (c_1 + c_2 t)e^{-3t}</m>.
+      Applying the initial conditions,
+        <md>
+          <mrow>c_1 &amp;= 1,</mrow>
+          <mrow>-3c_1 + c_2 &amp;= 0,</mrow>
+        </md>
+      giving <m>c_1 = 1</m> and <m>c_2 = 3</m>. The solution is
+        <md>y(t) = (1 + 3t)e^{-3t}.</md>
+      The solution decays to zero as quickly as possible without
+      oscillating, which is the hallmark of critical damping.
+      </p>
+    </li>
+  </ol>
+</solution>
 	    </exercise>
 
 	 </exercises>
