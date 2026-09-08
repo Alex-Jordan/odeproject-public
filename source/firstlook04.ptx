@@ -42,7 +42,7 @@
             </md>
         we might be able to find approximations at <m>a = t_0, t_1, t_2, \ldots, t_N = b</m> in <m>[a, b]</m> at best. If we choose <m>t_1, t_2, \ldots, t_N</m> to be equally spaced on <m>[a, b]</m>, we can write
             <md>t_k = t_0 + kh,</md>
-        where <m>h = 1/N</m> and <m>k = 1, 2, \ldots, N</m>.  We say that <m>h</m> is the <term>step size</term><idx><h>Euler's method</h><h>step size</h></idx> for our approximation.</p>
+        where <m>h = (b - a)/N</m> and <m>k = 1, 2, \ldots, N</m>.  We say that <m>h</m> is the <term>step size</term><idx><h>Euler's method</h><h>step size</h></idx> for our approximation.</p>
 
         <p>Given an approximation <m>Y_k</m> for the solution <m>y_k = y(t_k)</m>, the question is how to find an approximate solution <m>Y_{k+1}</m> at <m>t_{k+1}</m>. To generate the second approximation, we will construct a tangent line to the solution at <m>y(t_0) = y_0</m>.  If we use the slope of the solution curve at <m>t_0</m>, then
             <md>y'(t_0) = f(t_0, y_0).</md>
@@ -498,7 +498,7 @@
 
                     <li><p>Solve the problem analytically if possible. If it is not possible for you to find the analytic solution, use <em>Sage</em>.</p></li>
 
-                    <li><p>Use the results of (b) and (c), to construct a table of errors for <m>Y_i - y_i</m> for <m>i = 1, 2, 3</m>.</p></li>
+                    <li><p>Use the results of (b) and (c), to construct a table of errors for <m>|Y_i - y_i|</m> for <m>i = 1, 2, 3</m>.</p></li>
 
                 </ol></p></introduction>
             <exercise>
@@ -990,11 +990,11 @@
 
                         <li><p>Find the exact solution of the initial value problem.</p></li>
 
-                        <li><p>Use Euler's method with step size <m>h = 0.5</m> to approximate the solution to the initial value problem on the interval <m>[0,2]</m>  Your solution should include a table of approximate values of the dependent variable as well as the exact values of the dependent variable.  Make sure that your approximations are accurate to <em>four</em> decimal places.</p></li>
+                        <li><p>Use Euler's method with step size <m>h = 0.5</m> to approximate the solution to the initial value problem on the interval <m>[0,2]</m>.  Your solution should include a table of approximate values of the dependent variable as well as the exact values of the dependent variable.  Make sure that your approximations are accurate to <em>four</em> decimal places.</p></li>
 
                         <li><p>Sketch the graph of the approximate and exact solutions.</p></li>
 
-                        <li><p>Use the error bound theorem (<xref ref="firstlook04-theorem-euler-error-bound" />) to estimate the error at each approximation.  Your solution should include a table of approximate values of the dependent variable the exact values of the dependent variable, the error estimates, and the actual error.  Make sure that your approximations are accurate to <em>four</em> decimal places.</p></li>
+                        <li><p>Use the error bound theorem (<xref ref="firstlook04-theorem-euler-error-bound" />) to estimate the error at each approximation.  Your solution should include a table of approximate values of the dependent variable, the exact values of the dependent variable, the error estimates,and the actual error.  Make sure that your approximations are accurate to <em>four</em> decimal places.</p></li>
 
                     </ol></p>
             </statement>

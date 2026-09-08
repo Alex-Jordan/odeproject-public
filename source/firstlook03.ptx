@@ -324,7 +324,7 @@
             <md>\frac{dx}{dt} = f(x) = \cos(x^2 + \pi)</md>
         with <m>x(0) = x_0</m>, then we may approximate this initial value problem near <m>x_0</m> with
             <md>
-                <mrow>\frac{dx}{dt} &amp; =  f(x_0) + f'(x_0)(x - x_0) = \cos(x_0^2 + \pi) + 2 x _0 \sin(x_0^2 + \pi)(x - x_0)</mrow>
+                <mrow>\frac{dx}{dt} &amp; \approx  f(x_0) + f'(x_0)(x - x_0) = \cos(x_0^2 + \pi) + 2 x _0 \sin(x_0^2 + \pi)(x - x_0)</mrow>
                 <mrow>x(0) &amp; = x_0.</mrow>
             </md>
         Of course, this strategy might not work very well if <m>f(x_0) = \cos(x_0^2 + \pi) = 0</m> or <m>f'(x_0) = 2 x _0 \sin(x_0^2 + \pi) = 0</m>.</p>

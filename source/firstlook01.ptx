@@ -77,7 +77,7 @@
 
         <p>To summarize, we say that the function <m>x(t) = Ce^{kt}</m> is a <term>general solution</term><idx>general solution</idx> of the equation <m>x' = kx</m>, and <m>x(t) = x_0 e^{kt}</m> is a <term>particular solution</term><idx>particular solution</idx> to the differential equation. The general solution to our equation <m>x(t) = Ce^{kt}</m> graphs as an infinite family of curves, which we will call <term>integral curves</term><idx>integral curves</idx> or <term>solution curves</term><idx>solution curves</idx> (<xref ref="firstlook01-figure-integral-curves"/>).</p>
 
-        <p>In general, given a differential equation <m>dx/dt =f(t, x)</m>, a solution to the differential equation is a function <m>x(t)</m> such that <m>x'(t) = f(t, x(t))</m>.  Furthermore, if <m>x(t)</m> satisfies a given initial condition <m>x(0) = x_0</m>, then <m>x(t)</m> is a solution to the in initial value problem
+        <p>In general, given a differential equation <m>dx/dt =f(t, x)</m>, a solution to the differential equation is a function <m>x(t)</m> such that <m>x'(t) = f(t, x(t))</m>.  Furthermore, if <m>x(t)</m> satisfies a given initial condition <m>x(0) = x_0</m>, then <m>x(t)</m> is a solution to the initial value problem
             <md>
               <mrow>x'(t) &amp; = f(t, x),</mrow>
               <mrow>x(0) &amp; = x_0.</mrow>
@@ -191,11 +191,11 @@
 
 
         <activity>
-            <title>Modeling a Population with a Threshhold</title>
+            <title>Modeling a Population with a Threshold</title>
 
             <introduction>
 
-                <p>We can modify the logistic growth model to understand how a population with a minimum threshold grows. The black rhinoceros, once the most numerous of all rhinoceros species, is now critically endangered. The black rhino, native to eastern and southern Africa, was estimated to have a population of about <m>100{,}000</m> around 1900. Because of hunting, habitat changes, competing species, and most of all illegal poaching, the number of black rhinos today is estimated to be below <m>3000</m>. If the wild population becomes too low, the animals may not be able to find suitable mates and the black rhino will become extinct. There must be a minimum population for the species to survive.  Suppose that this minimum or threshold population for the black rhino is <m>1000</m> animals and that remaining habitant in Africa will support no more that <m>20{,}000</m> rhinos. How might we model the current population, <m>P(t)</m> of black rhinos?</p>
+                <p>We can modify the logistic growth model to understand how a population with a minimum threshold grows. The black rhinoceros, once the most numerous of all rhinoceros species, is now critically endangered. The black rhino, native to eastern and southern Africa, was estimated to have a population of about <m>100{,}000</m> around 1900. Because of hunting, habitat changes, competing species, and most of all illegal poaching, the number of black rhinos today is estimated to be about <m>6500</m>. If the wild population becomes too low, the animals may not be able to find suitable mates and the black rhino will become extinct. There must be a minimum population for the species to survive.  Suppose that this minimum or threshold population for the black rhino is <m>1000</m> animals and that remaining habitat in Africa will support no more that <m>20{,}000</m> rhinos. How might we model the current population, <m>P(t)</m> of black rhinos?</p>
 
             </introduction>
        
@@ -1448,7 +1448,7 @@
 
                     <li>Sketch solution curves for  <m>C = 1, 2, \ldots, 5</m>.</li>
 
-                    <li>Verify that <m>y = 0</m> is a solution to the differential equation in part (a).  Can you find a value for <m>C</m> such that
+                    <li>Verify that <m>y = 0</m> is a solution to the differential equation.  Can you find a value for <m>C</m> such that
                         <md>y(t) = \frac{2}{1 + Ce^{-2t}} = 0?</md>
                     </li>
 

@@ -136,7 +136,7 @@
         where <m>{\mathbf x} = (x, y)</m>, <m>d{\mathbf x}/dt = (dx/dt, dy/dt)</m>, <m>{\mathbf f} = (f, g)</m>, and <m>{\mathbf x}_0 = (x_0, y_0)</m>.
         We wish to find approximate values <m>x_1, x_2, \ldots, x_n</m> and <m>y_1, y_2, \ldots, y_n</m> for the solution <m>x(t)</m> and <m>y(t)</m> at the points
             <md>t_k = t_0 + kh, \qquad k = 1, 2, \ldots, n,</md>
-        where <m>h</m> is the step size. If we let <m>{\mathbf x}_k = (x_k, y_k)</m> and <m>{\mathbf f}_k = (f(x_k, y_k ), g(x_k, y_k ))</m>, then Euler's method now becomes
+        where <m>h</m> is the step size. If we let <m>{\mathbf x}_k = (x_k, y_k)</m> and <m>{\mathbf f}_k = (f(t_k, x_k, y_k ), g(t_k, x_k, y_k ))</m>, then Euler's method now becomes
             <md>{\mathbf x}_{k + 1} = {\mathbf x}_k + h {\mathbf f}_k</md>
         or
             <md>

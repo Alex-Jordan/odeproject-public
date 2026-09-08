@@ -252,7 +252,7 @@
 
             <p>Before we proceed further with our analysis, let us determine what happens on the nullclines themselves. That is, we will examine the case when <m>dx/dt = 0</m> or <m>dy/dt = 0</m>. If <m>dx/dt = 0</m>, then any solution crossing this <m>x</m>-nullcline must be moving vertically. There can be no right or left movement at this point in the phase portrait. We can indicate this fact along with the direction of vertical movement by drawing a vertical slash with an arrow on the <m>x</m>-nullcline (<xref ref="systems02-figure-nullclines-competing-species-1" />). For example, the point <m>(0.5, 0.25)</m> lies on the <m>x</m>-nullcline and 
                 <md>\frac{dy}{dt}(0.5, 0.25) \lt 0.</md>
-            Therefore, the trajectory that crosses the <m>R</m>-nullcline at <m>(0.5, 0.25)</m> is moving down. As we move along the <m>x</m>-nullcline, the direction of this arrow can only change when we cross an <m>y</m>-nullcline.</p>
+            Therefore, the trajectory that crosses the <m>y</m>-nullcline at <m>(0.5, 0.25)</m> is moving down. As we move along the <m>x</m>-nullcline, the direction of this arrow can only change when we cross an <m>y</m>-nullcline.</p>
 
             <p>Similarly, there can be no vertical motion on an <m>y</m>-nullcline. We will indicate the direction of horizontal motion by drawing a horizontal line with an arrow pointing to the right if <m>dx/dt \gt 0</m> on the <m>y</m>-nullcline and an arrow pointing to the left if <m>dx/dt \lt 0</m> on the <m>y</m>-nullcline.</p>
             
@@ -401,7 +401,7 @@
 
                 <li><p><em>Step 4.</em> Label the regions of the <m>xy</m>-plane where <m>dx/dt \lt 0</m> and where <m>dx/dt \gt 0</m>. These regions are always separated by <m>x</m>-nullclines.  Likewise, label the regions where <m>dy/dt</m> is positive and negative.</p></li>
 
-                <li><p><em>Step 5.</em>Go back and put arrows on the vertical hash marks of the <m>x</m> nullclines. These arrows indicate whether the motion across the nullcline is up or down. The arrows are up on the parts of the <m>x</m>-nullclines that are in the <m>dy/dt \gt 0</m> region, and down on those parts of the <m>x</m>-nullclines in the <m>dy/dt \lt 0</m> regions. Likewise, draw arrows on the horizontal slash marks of the <m>y</m>-nullclines. These arrows are pointing right on the parts of the <m>y</m>-nullclines in the <m>dx/dt \gt 0</m> regions and left point on the parts in the <m>dx/dt \lt 0</m> regions.</p></li>
+                <li><p><em>Step 5.</em> Go back and put arrows on the vertical hash marks of the <m>x</m> nullclines. These arrows indicate whether the motion across the nullcline is up or down. The arrows are up on the parts of the <m>x</m>-nullclines that are in the <m>dy/dt \gt 0</m> region, and down on those parts of the <m>x</m>-nullclines in the <m>dy/dt \lt 0</m> regions. Likewise, draw arrows on the horizontal slash marks of the <m>y</m>-nullclines. These arrows are pointing right on the parts of the <m>y</m>-nullclines in the <m>dx/dt \gt 0</m> regions and left point on the parts in the <m>dx/dt \lt 0</m> regions.</p></li>
 
                 <li><p><em>Step 6.</em>
                      <ul>

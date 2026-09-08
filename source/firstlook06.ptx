@@ -72,7 +72,7 @@
                 <md>y = - \frac{1}{t + C}</md>
             or
                 <md>y = \frac{1}{1-t}.</md>
-            Therefore, a solution also exists on <m>(-\infty, 1)</m> if <m>y(0) = -1</m>. In the case that <m>y(0) = -1</m>, the solution is
+            A solution also exists on <m>(-\infty, 1)</m> if <m>y(0) = -1</m>. In the case that <m>y(0) = -1</m>, the solution is
                 <md>y = - \frac{1}{t + 1},</md>
             and a solution exists on <m>(-1, \infty)</m>. Solutions are only guaranteed to exist on an open interval containing the initial value and are very dependent on the initial condition.</p>
         </example>

@@ -183,7 +183,7 @@
 
         <p>A second-order differential equation can be restated in terms of a system of first order differential equations. Given the differential equation
             <md>mx'' + bx' + kx = F(t),</md> 
-        with initial position <m>x(0) = x_0</m> and initial velocity <m>x'(0) = x_0'</m>, we can rewrite this equation as a system of first-order differential equations by letting <m>v(t) = x'(t)</m>. In this case, the equation becomes
+        with initial position <m>x(0) = x_0</m>, initial velocity <m>x'(0) = x_0'</m>, and a forcing term <m>F(t)</m>, we can rewrite this equation as a system of first-order differential equations by letting <m>v(t) = x'(t)</m>. In this case, the equation becomes
             <md>mv' + bv + kx = F(t).</md>
         We now have a system of first-order differential equations,
             <md>
@@ -207,7 +207,7 @@
             </introduction>
             <task>
                 <statement>
-                    <p>Rewrite the second-order differential equation, <m>d^2 y/dt^2 + (k/m) y = 0</m>, as a system of two first-order differentail equations, where <m>v = y'</m>.</p>
+                    <p>Rewrite the second-order differential equation, <m>d^2 y/dt^2 + (k/m) y = 0</m>, as a system of two first-order differential equations, where <m>v = y'</m>.</p>
                 </statement>
             </task>
             <task>
@@ -270,7 +270,7 @@
              <image width="60%">
                 <xi:include href="prefigure/systems01-SIR-epidemic.xml"/>
               </image>
-            <caption>The susceptible and removed populations for an SIR epidemic</caption>
+            <caption>The susceptible and infected populations for an SIR epidemic</caption>
         </figure>
 
 
@@ -627,7 +627,7 @@
                     </md></p></li>
 
                     <li><p><md>
-                        <mrow>\frac{d^2x}{dt^2} + \frac{dx}{dt}' + 4x \amp = \sin t</mrow>
+                        <mrow>\frac{d^2x}{dt^2} + \frac{dx}{dt} + 4x \amp = \sin t</mrow>
                         <mrow>x(0) \amp = 4</mrow>
                         <mrow>x'(0) \amp = -3</mrow>
                     </md></p></li>

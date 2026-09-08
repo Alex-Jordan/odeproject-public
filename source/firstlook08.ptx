@@ -85,7 +85,7 @@
             <p>Suppose an oil spill occurs off the coast of Texas. From time to time, but irregularly, a helicopter is dispatched by the Coast Guard to photograph the oil slick. On each trip, the helicopter arrives over the slick, the pilot takes a photo, waits 10 minutes, takes a second photo, and heads home. On each of seven trips the size (in area) of the slick is measured from both photographs.  The data is given in <xref ref="firstlook08-table-oil-spill" /></p>
 
             <table xml:id="firstlook08-table-oil-spill">
-            <title>Data on spread of an oil spill</title>
+            <title>Data on spread of an oil spill (in square miles)</title>
             <tabular halign="center" top="medium">
                 <row bottom="medium">
                     <cell>Initial Observation</cell><cell>10 Minutes Later</cell>
@@ -403,7 +403,7 @@
 			                    <cell>Set 2</cell><cell>10.0</cell><cell>0.60</cell><cell>5.5</cell><cell>0.10</cell><cell>8.5</cell><cell>0.45</cell>
 			                </row>
 			                <row bottom="medium">
-			                    <cell>Set 3</cell><cell>10.5</cell><cell>0.50</cell><cell>6.5</cell><cell>0.10</cell><cell>9.0</cell><cell>0.40</cell>
+			                    <cell>Set 3</cell><cell>10.5</cell><cell>0.50</cell><cell>6.5</cell><cell>0.10</cell><cell>9.0</cell><cell>0.45</cell>
 			                </row>
 			            </tabular>      
 			        </table>
